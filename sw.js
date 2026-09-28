@@ -1,4 +1,4 @@
-﻿const CACHE='pohang-history-walk-v11';
+const CACHE='pohang-history-walk-v12';
 const CORE=[
  './','./index.html','./student.html','./learning.html','./essays.html','./archive.html','./newspaper.html','./culture.html','./film.html','./budget.html','./plans.html','./plan-a.html','./plan-b.html','./plan-c.html','./teams.html','./teacher.html','./bus.html','./improvements.html',
  './assets/styles.css','./assets/app.js','./assets/harbor.svg','./assets/coast.svg','./assets/lighthouse.svg','./assets/independence.svg','./assets/hyanggyo.svg','./assets/waterworks.svg','./assets/memorial.svg','./assets/museum.svg','./assets/fortress.svg','./assets/exile.svg','./assets/guryongpo-house.svg','./assets/ara.svg','./assets/gyeongju-tomb.svg','./assets/gyeongju-excavation.svg','./assets/gyeongju-gyochon.svg','./assets/gyeongju-museum.svg',
