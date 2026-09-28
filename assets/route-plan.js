@@ -1,7 +1,29 @@
 (()=> {
  const P=window.ROUTE_PLANS[window.PLAN_CODE], E=(window.ROUTE_ESSAYS||{})[window.PLAN_CODE]||{}, G=(window.ROUTE_GALLERIES||{})[window.PLAN_CODE]||[];
- const q=s=>document.querySelector(s);
- const maps=(s)=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(s.lat+','+s.lon+' '+s.name);
+ const OUTDOOR={
+  A:['나루끝·북부시장','동빈내항','수도산·덕수공원'],
+  B:['호미곶 해맞이광장·해안','수도산·덕수공원'],
+  C:['대릉원·천마총','경주교촌마을·최부자댁']
+ };
+ let planMap=null;
+ const q=s=>document.querySelector(s), qa=s=>[...document.querySelectorAll(s)];
+ const maps=s=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(s.lat+','+s.lon+' '+s.name);
+ const isOutdoor=s=>(OUTDOOR[P.code]||[]).includes(s.name);
+ const storeKey=(kind,suffix='')=>'ph-'+kind+'-'+P.code+(suffix?'-'+suffix:'');
+ function distanceM(a,b,c,d){
+  const R=6371000, toRad=x=>x*Math.PI/180;
+  const dLat=toRad(c-a), dLon=toRad(d-b);
+  const x=Math.sin(dLat/2)**2+Math.cos(toRad(a))*Math.cos(toRad(c))*Math.sin(dLon/2)**2;
+  return 2*R*Math.asin(Math.sqrt(x));
+ }
+ function fieldBar(){
+  const hero=q('.page-hero'); if(!hero || q('#field-tools'))return;
+  hero.insertAdjacentHTML('afterend',`<section class="section compact field-tools" id="field-tools"><div class="container">
+   <div class="field-tools-grid"><div><span class="kicker">FIELD MODE · PLAN ${P.code}</span><h2>현장 운영 모드</h2><p>날씨에 따라 동선을 단순화하고, 각 장소에서 위치·인원점검을 바로 확인합니다. 체크상태는 이 기기에만 저장됩니다.</p></div>
+   <div class="field-controls"><label>운영모드<select id="field-mode"><option value="normal">기본</option><option value="rain">비·강풍</option><option value="heat">폭염</option></select></label><a class="button alt" href="recon.html">사전답사 체크</a></div></div>
+   <div id="field-mode-note" class="notice field-note" hidden></div>
+  </div></section>`);
+ }
  function render(){
   document.title='Plan '+P.code+' · '+P.title+' | 포항고 인문학 역사기행';
   q('#plan-code').textContent='PLAN '+P.code;
@@ -10,10 +32,12 @@
   q('#plan-hero').textContent=P.hero;
   q('#plan-photos').innerHTML=G.map(x=>'<figure><img loading="lazy" src="'+x.src+'" alt="'+x.alt+'"><figcaption>'+x.cap+'</figcaption></figure>').join('');
   q('#schedule-body').innerHTML=P.schedule.map(r=>'<tr>'+r.map((x,i)=>'<'+(i===0?'th':'td')+'>'+x+'</'+(i===0?'th':'td')+'>').join('')+'</tr>').join('');
-  q('#stops').innerHTML=P.stops.map(s=>{
-    const essay=E[s.name];
-    return '<article class="stop" id="stop-'+s.n+'"><div class="stop-head"><div class="stop-num">'+s.n+'</div><div><h2>'+s.name+'</h2><div class="address">'+s.addr+'</div><div class="coord">'+s.lat.toFixed(6)+', '+s.lon.toFixed(6)+(s.meta?' · '+s.meta:'')+(s.contact?' · 문의 '+s.contact:'')+'</div><div class="map-links"><a target="_blank" href="'+maps(s)+'">지도에서 열기</a></div></div></div>'+
-    '<div class="stop-body"><div><h3>가서 볼 것</h3><ol>'+s.see.map(x=>'<li>'+x+'</li>').join('')+'</ol><h3>학생 결과물</h3><p>'+s.output+'</p></div><aside class="mission"><b>발표 주제</b><p>'+s.essay+'</p>'+(essay?'<details><summary>3분 발표문 펼치기</summary>'+essay.map(x=>'<p>'+x+'</p>').join('')+'</details>':'<a href="essays.html">A안 발표문 전체 보기 →</a>')+'</aside></div></article>';
+  q('#stops').innerHTML=P.stops.map((s,i)=>{
+    const essay=E[s.name], prev=P.stops[i-1], next=P.stops[i+1];
+    const nav='<div class="field-nav">'+(prev?'<a href="#stop-'+prev.n+'">← '+prev.n+' 이전</a>':'<span></span>')+(next?'<a href="#stop-'+next.n+'">'+next.n+' 다음 →</a>':'<a href="#field-tools">운영모드 ↑</a>')+'</div>';
+    const ops='<details class="field-ops"><summary>교사용 현장 체크</summary><div class="field-ops-body"><label class="headcount"><input type="checkbox" data-headcount="'+s.n+'"> 인원점검 완료</label><button type="button" class="button alt locate-btn" data-lat="'+s.lat+'" data-lon="'+s.lon+'">내 위치와 거리 확인</button><span class="geo-status" aria-live="polite"></span></div></details>';
+    return '<article class="stop'+(isOutdoor(s)?' is-outdoor':'')+'" id="stop-'+s.n+'"><div class="stop-head"><div class="stop-num">'+s.n+'</div><div><h2>'+s.name+'</h2><div class="address">'+s.addr+'</div><div class="coord">'+s.lat.toFixed(6)+', '+s.lon.toFixed(6)+(s.meta?' · '+s.meta:'')+(s.contact?' · 문의 '+s.contact:'')+'</div><div class="map-links"><a target="_blank" rel="noopener" href="'+maps(s)+'">지도에서 열기</a><a href="#stop-'+s.n+'" title="이 장소 직접 링크">현재 장소 링크</a></div></div></div>'+
+    '<div class="stop-body"><div><h3>가서 볼 것</h3><ol>'+s.see.map(x=>'<li>'+x+'</li>').join('')+'</ol><h3>학생 결과물</h3><p>'+s.output+'</p></div><aside class="mission"><b>발표 주제</b><p>'+s.essay+'</p>'+(essay?'<details><summary>3분 발표문 펼치기</summary>'+essay.map(x=>'<p>'+x+'</p>').join('')+'</details>':'<a href="essays.html">A안 발표문 전체 보기 →</a>')+'</aside></div>'+ops+nav+'</article>';
   }).join('');
   q('#food').innerHTML=P.food.map((f,i)=>'<article class="archive-card"><span class="kicker">후보 '+(i+1)+'</span><h3>'+f.name+'</h3><p>'+f.addr+'<br><b>'+f.phone+'</b></p><p>'+f.note+'</p></article>').join('');
   q('#culture-title').textContent=P.culture.title;
@@ -23,15 +47,50 @@
   q('#newspaper').innerHTML=P.newspaper.map((x,i)=>'<article class="archive-card"><span class="kicker">ARTICLE '+(i+1)+'</span><h3>'+x+'</h3><p>현장사진·학생 인터뷰·사료를 결합해 600~900자 기사로 발전시킵니다.</p></article>').join('');
   q('#record').innerHTML=P.record.map(x=>'<li>'+x+'</li>').join('');
   q('#rain').textContent=P.rain;
-  initMap();
+  fieldBar();
+  bindFieldTools();
+  applyFieldMode(localStorage.getItem(storeKey('mode'))||'normal',false);
  }
- function initMap(){
+ function initMap(stops=P.stops){
   if(!window.L)return;
-  const m=L.map('plan-map',{scrollWheelZoom:false});
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'}).addTo(m);
+  if(planMap){planMap.remove();planMap=null}
+  planMap=L.map('plan-map',{scrollWheelZoom:false});
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'}).addTo(planMap);
   const pts=[];
-  P.stops.forEach(s=>{pts.push([s.lat,s.lon]);L.marker([s.lat,s.lon]).addTo(m).bindPopup('<b>'+s.n+'. '+s.name+'</b><br>'+s.addr)});
-  L.polyline(pts,{color:'#8b3529',weight:3,opacity:.8,dashArray:'7 6'}).addTo(m);m.fitBounds(pts,{padding:[25,25]});
+  stops.forEach(s=>{pts.push([s.lat,s.lon]);L.marker([s.lat,s.lon]).addTo(planMap).bindPopup('<b>'+s.n+'. '+s.name+'</b><br>'+s.addr)});
+  if(pts.length>1){L.polyline(pts,{color:'#8b3529',weight:3,opacity:.8,dashArray:'7 6'}).addTo(planMap);planMap.fitBounds(pts,{padding:[25,25]})}
+  else if(pts.length===1){planMap.setView(pts[0],15)}
+ }
+ function applyFieldMode(mode,persist=true){
+  const select=q('#field-mode'), note=q('#field-mode-note');
+  if(select)select.value=mode;
+  qa('.stop.is-outdoor').forEach(el=>{el.hidden=(mode==='rain')});
+  const visible=mode==='rain'?P.stops.filter(s=>!isOutdoor(s)):P.stops;
+  initMap(visible);
+  if(note){
+   if(mode==='rain'){note.hidden=false;note.innerHTML='<strong>비·강풍 모드</strong>야외 답사지 카드를 접고 실내 지점만 지도에 표시했습니다. 실제 취소·대체 여부는 인솔교사 판단과 기관 운영상황이 우선입니다. '+P.rain}
+   else if(mode==='heat'){note.hidden=false;note.innerHTML='<strong>폭염 모드</strong>야외 지점은 숨기지 않되 체류시간을 줄이고 물·그늘·휴식 확보를 우선합니다. 기상특보가 있으면 교사용 대체안으로 전환합니다.'}
+   else note.hidden=true;
+  }
+  if(persist)localStorage.setItem(storeKey('mode'),mode);
+ }
+ function bindFieldTools(){
+  qa('[data-headcount]').forEach(el=>{
+   const key=storeKey('headcount',el.dataset.headcount);
+   el.checked=localStorage.getItem(key)==='1';
+   el.addEventListener('change',()=>localStorage.setItem(key,el.checked?'1':'0'));
+  });
+  qa('.locate-btn').forEach(btn=>btn.addEventListener('click',()=>{
+   const status=btn.parentElement.querySelector('.geo-status');
+   if(!navigator.geolocation){status.textContent='이 브라우저에서는 위치 확인을 지원하지 않습니다.';return}
+   status.textContent='현재 위치 확인 중…';
+   navigator.geolocation.getCurrentPosition(pos=>{
+    const d=distanceM(pos.coords.latitude,pos.coords.longitude,Number(btn.dataset.lat),Number(btn.dataset.lon));
+    const label=d<1000?Math.round(d)+'m':(d/1000).toFixed(1)+'km';
+    status.textContent=d>300?'표시 지점과 약 '+label+' 떨어져 있습니다. 좌표는 안내용이므로 인솔교사 안내와 실제 출입구를 우선하세요.':'표시 지점과 약 '+label+' 이내입니다. GPS 오차가 있을 수 있습니다.';
+   },()=>{status.textContent='위치 권한을 허용하지 않았습니다. 좌표는 안내용입니다.'},{enableHighAccuracy:true,timeout:8000,maximumAge:30000});
+  }));
+  q('#field-mode')?.addEventListener('change',e=>applyFieldMode(e.target.value,true));
  }
  document.addEventListener('DOMContentLoaded',render);
 })();

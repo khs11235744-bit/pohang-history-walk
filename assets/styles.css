@@ -136,3 +136,38 @@ details p{font-size:.84rem;color:#403b34}
   #plan-title{font-size:clamp(2.1rem,10vw,2.75rem);line-height:1.18;word-break:keep-all;overflow-wrap:anywhere;max-width:100%}
   .page-hero .sub,.page-hero .lead{max-width:100%;word-break:keep-all}
 }
+
+
+/* HADES pass 10 — field mode / recon checklist */
+.field-tools{background:#e9e1d2}
+.field-tools-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:30px;align-items:end}
+.field-tools .kicker{font-size:.72rem;letter-spacing:.14em;color:var(--rust);font-weight:800}
+.field-tools h2{font-size:2rem;margin:8px 0}
+.field-tools p{margin:0;color:var(--muted)}
+.field-controls{display:flex;gap:10px;align-items:end;justify-content:flex-end;flex-wrap:wrap}
+.field-controls label{display:grid;gap:6px;font-size:.75rem;font-weight:800;color:var(--muted)}
+.field-controls select{min-width:150px;border:1px solid var(--ink);background:var(--white);padding:10px 12px;font:inherit;color:var(--ink)}
+.field-note{margin-bottom:0}
+.field-nav{display:flex;justify-content:space-between;gap:12px;margin-top:22px;border-top:1px solid var(--line);padding-top:14px}
+.field-nav a{font-size:.82rem;font-weight:800;text-decoration:none;border-bottom:1px solid var(--ink)}
+.field-ops{margin-top:22px;border:1px solid var(--line);padding:0;background:rgba(255,253,247,.6)}
+.field-ops summary{padding:11px 13px;color:var(--ink)}
+.field-ops-body{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:0 13px 13px}
+.headcount{font-size:.82rem;font-weight:800}
+.headcount input{width:18px;height:18px;vertical-align:middle;margin-right:6px;accent-color:var(--rust)}
+.geo-status{font-size:.76rem;color:var(--muted);flex:1 1 280px}
+.recon-progress{display:flex;align-items:baseline;gap:8px;margin:20px 0}
+.recon-progress b{font:700 2.2rem/1 var(--serif);color:var(--rust)}
+.recon-progress span{font-size:.78rem;color:var(--muted)}
+.recon-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink);border-left:1px solid var(--ink);background:var(--white)}
+.check-row{display:grid;grid-template-columns:28px 1fr;gap:10px;padding:16px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);cursor:pointer}
+.check-row input{width:19px;height:19px;margin:2px 0 0;accent-color:var(--rust)}
+.check-row b{display:block;font-size:.9rem;margin-bottom:3px}
+.check-row small{display:block;color:var(--muted);font-size:.76rem;line-height:1.55}
+@media(max-width:720px){
+ .field-tools-grid{grid-template-columns:1fr}.field-controls{justify-content:flex-start}
+ .field-controls label,.field-controls select{width:100%}
+ .recon-grid{grid-template-columns:1fr}
+ .check-row:nth-child(n){border-right:1px solid var(--ink)}
+}
+@media print{.field-tools,.field-nav,.field-ops{display:none!important}}

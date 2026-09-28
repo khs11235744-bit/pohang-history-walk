@@ -136,3 +136,13 @@
 - Q3: 중복 0.8.0 두 번째 항목을 0.8.1로 정리
 - Q3: 메인 카피와 PWA 이름을 A/B/C 공통 구조에 맞게 조정
 - PWA 캐시 v12
+
+
+## 0.13.0 — HADES pass 10 / field operations
+- Q1: Plan A/B/C 상세페이지에 이전·다음 장소 현장 내비게이션과 장소 직접 해시링크 추가
+- Q1: 사용자가 허용할 때 현재 위치와 답사지 핀 거리를 계산하고 300m 초과 시 좌표 안내 경고 표시
+- Q2: 장소별 교사용 인원점검 체크박스를 브라우저 로컬 저장으로 추가
+- Q2: 비·강풍 모드에서는 야외 답사 카드를 숨기고 실내 지점만 지도에 표시, 폭염 모드는 체류시간 축소 안내
+- Q2: recon.html 사전답사 모바일 체크리스트 추가(A/B/C별 버스·집결·화장실·좌표·예약·중식·안전 확인)
+- Q3: scripts/check_static.py와 GitHub Actions Static QA를 추가해 내부 링크·JS 문법·manifest JSON을 자동 검사
+- PWA cache v13에 recon.html / assets/recon.js 포함
