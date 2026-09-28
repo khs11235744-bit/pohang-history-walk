@@ -39,6 +39,6 @@
 <tr><th>날씨 영향</th><td>중간</td><td>호미곶 때문에 큼</td><td>중간, 과메기문화관으로 실내대체 쉬움</td></tr>
 </tbody></table></div></div></section>
 </main><footer><div class="container"><div class="foot-title">포항고 인문사회부 · 2026.10.17</div></div></footer>
-<script src="data/plans.js"></script><script>
+<div class="section compact"><div class="container"><div class="button-row"><a class="button" href="plan-a.html">A 상세</a><a class="button" href="plan-b.html">B 상세</a><a class="button" href="plan-c.html">C 상세</a></div></div></div><script src="data/plans.js"></script><script>
 const P=window.FIELDTRIP_PLANS;document.getElementById('plans').innerHTML=Object.entries(P).map(([k,p])=>'<article class="stop"><div class="stop-head"><div class="stop-num">'+k+'</div><div><h2>'+p.title+'</h2><div class="address">'+p.tag+'</div></div></div><div class="stop-body"><div><p class="lead">'+p.theme+'</p><p><b>동선</b> · '+p.route.join(' → ')+'</p><p>'+p.strength+'</p></div><aside class="mission"><b>문화활동</b><p>'+p.culture+'</p></aside></div></article>').join('');
 </script></body></html>
