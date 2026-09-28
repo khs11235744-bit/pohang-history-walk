@@ -1,0 +1,13 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>250만원 예산안 | 포항고 인문학 역사기행</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin"><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/styles.css"></head><body>
+<header class="site-head"><div class="head-inner"><a class="brand" href="teacher.html">250만원 예산안 <small>교사용</small></a><nav class="nav"><a href="teacher.html">운영판</a><a href="film.html">필름 프로젝트</a><a aria-current="page" href="budget.html">예산</a></nav></div></header>
+<main id="main"><section class="page-hero"><div class="container"><div class="eyebrow">₩2,500,000 / WORKING BUDGET</div><h1>돈을 쓰고 끝나는 대신<br>결과물이 남도록.</h1><p class="sub">차량·식사·보험 같은 기본 운영비를 먼저 확보하고, 남는 예산을 학생 기록·해설·문화활동·사진전으로 연결합니다.</p></div></section>
+<section class="section"><div class="container"><div class="section-head"><div class="section-no">01</div><div><h2>권장안 — 일회용 카메라 10대</h2></div></div><div class="table-wrap"><table><thead><tr><th>항목</th><th>금액</th><th>산출·용도</th></tr></thead><tbody id="budget-rows"></tbody><tfoot><tr><th>합계</th><th id="budget-total"></th><th>250만원</th></tr></tfoot></table></div><div class="notice warning" id="caveat"></div></div></section>
+<section class="section"><div class="container"><div class="section-head"><div class="section-no">02</div><div><h2>카메라 수량 비교</h2><p class="section-intro">현상·스캔을 롤당 5,000원, 펀세이버27을 대당 24,500원으로 놓은 계획용 비교입니다.</p></div></div><div class="fact-grid"><div class="fact"><b>8대</b><span>약 236,000원</span></div><div class="fact"><b>10대</b><span>약 295,000원</span></div><div class="fact"><b>40대</b><span>약 1,180,000원</span></div><div class="fact"><b>추천</b><span>10대</span></div></div>
+<p>40명 전원 지급안은 카메라+현상만으로 약 118만원이 들어 전체 사업비의 47%가량을 차지합니다. 조별 협의라는 교육효과도 사라집니다. 10대안은 8개 조 + 신문부/전체기록 + 예비 구조라 비용과 교육효과가 가장 균형적입니다.</p></div></section>
+</main><footer><div class="container"><div class="foot-title">계획용 예산 · 실제 집행 전 학교회계 확인</div></div></footer>
+<script src="data/budget.js"></script><script>
+const B=window.FIELDTRIP_BUDGET,fmt=n=>n.toLocaleString('ko-KR')+'원';
+document.getElementById('budget-rows').innerHTML=B.rows.map(r=>'<tr><td>'+r.item+'</td><td>'+fmt(r.amount)+'</td><td>'+r.note+'</td></tr>').join('');
+document.getElementById('budget-total').textContent=fmt(B.rows.reduce((a,b)=>a+b.amount,0));
+document.getElementById('caveat').innerHTML='<strong>집행 전 확인</strong>'+B.caveat;
+</script></body></html>
