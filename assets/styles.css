@@ -130,3 +130,9 @@ details p{font-size:.84rem;color:#403b34}
 
 .page-hero h1{white-space:pre-line}
 @media(max-width:620px){.page-hero h1{font-size:2.08rem!important;white-space:pre-line!important;word-break:keep-all!important;overflow-wrap:anywhere!important}}
+
+/* HADES pass 9 — long Korean route titles on narrow phones */
+@media(max-width:620px){
+  #plan-title{font-size:clamp(2.1rem,10vw,2.75rem);line-height:1.18;word-break:keep-all;overflow-wrap:anywhere;max-width:100%}
+  .page-hero .sub,.page-hero .lead{max-width:100%;word-break:keep-all}
+}
