@@ -1,5 +1,5 @@
 (()=> {
- const P=window.ROUTE_PLANS[window.PLAN_CODE], E=(window.ROUTE_ESSAYS||{})[window.PLAN_CODE]||{};
+ const P=window.ROUTE_PLANS[window.PLAN_CODE], E=(window.ROUTE_ESSAYS||{})[window.PLAN_CODE]||{}, G=(window.ROUTE_GALLERIES||{})[window.PLAN_CODE]||[];
  const q=s=>document.querySelector(s);
  const maps=(s)=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(s.lat+','+s.lon+' '+s.name);
  function render(){
@@ -8,6 +8,7 @@
   q('#plan-title').textContent=P.title;
   q('#plan-tag').textContent=P.tag;
   q('#plan-hero').textContent=P.hero;
+  q('#plan-photos').innerHTML=G.map(x=>'<figure><img loading="lazy" src="'+x.src+'" alt="'+x.alt+'"><figcaption>'+x.cap+'</figcaption></figure>').join('');
   q('#schedule-body').innerHTML=P.schedule.map(r=>'<tr>'+r.map((x,i)=>'<'+(i===0?'th':'td')+'>'+x+'</'+(i===0?'th':'td')+'>').join('')+'</tr>').join('');
   q('#stops').innerHTML=P.stops.map(s=>{
     const essay=E[s.name];

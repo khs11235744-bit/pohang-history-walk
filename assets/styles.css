@@ -122,3 +122,11 @@ details p{font-size:.84rem;color:#403b34}
 @media(max-width:620px){
   .page-hero h1{word-break:normal;overflow-wrap:anywhere;font-size:2.25rem}
 }
+
+@media(max-width:620px){
+  .page-hero h1{font-size:clamp(2.05rem,10vw,2.55rem);line-height:1.18;overflow-wrap:anywhere}
+  .page-hero .sub,.page-hero .lead{font-size:.98rem}
+}
+
+.page-hero h1{white-space:pre-line}
+@media(max-width:620px){.page-hero h1{font-size:2.08rem!important;white-space:pre-line!important;word-break:keep-all!important;overflow-wrap:anywhere!important}}
