@@ -1,6 +1,6 @@
-const CACHE='pohang-history-walk-v2';
+﻿const CACHE='pohang-history-walk-v3';
 const CORE=[
- './','./index.html','./student.html','./essays.html','./archive.html','./teams.html','./teacher.html','./improvements.html',
+ './','./index.html','./student.html','./essays.html','./archive.html','./teams.html','./teacher.html','./bus.html','./improvements.html',
  './assets/styles.css','./assets/app.js','./assets/harbor.svg','./assets/waterworks.svg','./assets/memorial.svg','./assets/museum.svg',
  './data/stops.js','./data/improvements.js',
  './assets/history/map-1917.jpg','./assets/history/map-1925.jpg','./assets/history/map-1936.jpg','./assets/history/map-current.png',
