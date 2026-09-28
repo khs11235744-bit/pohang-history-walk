@@ -1,0 +1,28 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>답사에서 무엇을 볼까 | 포항고 인문학 역사기행</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/styles.css"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#8b3529"></head><body>
+<header class="site-head"><div class="head-inner"><a class="brand" href="index.html">보고 · 묻고 · 기록하기 <small>10.17</small></a><nav class="nav"><a href="student.html">학생 안내</a><a aria-current="page" href="learning.html">답사활동</a><a href="archive.html">옛 지도·사진</a><a href="newspaper.html">학교신문</a></nav></div></header>
+<main id="main">
+<section class="page-hero"><div class="container"><div class="eyebrow">OBSERVE / QUESTION / EVIDENCE</div><h1>많이 보는 것보다<br>하나를 제대로 봅니다.</h1><p class="sub">답사가 끝난 뒤 ‘재미있었다’로 끝내지 않습니다. 각 장소에서 관찰한 것과 사료를 연결해 자신의 질문을 만들고, 그 기록을 소논문·학교신문·세특 활동 근거로 발전시킵니다.</p><div class="notice"><strong>학생에게 필요한 네 가지</strong>① 직접 본 것 ② 옛 사진·지도에서 확인한 것 ③ 설명을 듣고 생긴 질문 ④ 내 생각이 달라진 지점. 이 네 가지가 남으면 답사는 결과물이 됩니다.</div></div></section>
+
+<section class="section"><div class="container"><div class="section-head"><div class="section-no">01</div><div><h2>장소마다 이것을 봅니다</h2><p class="section-intro">사진을 많이 찍기보다 ‘왜 이걸 찍었는지’ 설명할 수 있는 자료를 남깁니다.</p></div></div><div id="stop-learning"></div></div></section>
+
+<section class="section"><div class="container"><div class="section-head"><div class="section-no">02</div><div><h2>답사 뒤 네 갈래 결과물</h2><p class="section-intro">같은 답사에 참가해도 학생의 관심에 따라 결과물이 달라집니다. 학교생활기록부는 활동 사실과 실제 탐구과정을 바탕으로 교사가 기록합니다.</p></div></div><div id="pathways" class="archive-grid"></div></div></section>
+
+<section class="section"><div class="container"><div class="section-head"><div class="section-no">03</div><div><h2>세특으로 이어질 만한 탐구의 형태</h2><p class="section-intro">‘답사에 성실히 참여함’보다 어떤 자료를 비교하고 어떤 질문을 만들었는지가 중요합니다.</p></div></div>
+<div class="history-gallery">
+<figure><img src="assets/history/map-1917.jpg" alt="1917년 포항 지도"><figcaption><b>지도 비교.</b> 1917·1925·1936년 지도를 현재 지도와 비교해 항만·시가지 확장을 설명한다.</figcaption></figure>
+<figure><img src="assets/history/port-1935.jpg" alt="1935년 포항항"><figcaption><b>사료비판.</b> 식민지기 ‘개발’ 서술과 항구 사진을 함께 보고 누구의 시선인지 질문한다.</figcaption></figure>
+<figure><img src="assets/waterworks.svg" alt="수도산 상수도 도해"><figcaption><b>개념 적용.</b> 수도산에서 식민지 근대화의 편리함과 권력관계를 동시에 설명한다.</figcaption></figure>
+<figure><img src="assets/memorial.svg" alt="전쟁기억 도해"><figcaption><b>기억 연구.</b> 전시가 전쟁을 어떻게 구성하는지 개인 기록과 기념공간을 비교한다.</figcaption></figure>
+</div>
+<div class="notice"><strong>교사 기록용 관찰 포인트 예시</strong>사료의 작성 주체를 확인함 / 옛 지도와 현재 공간을 연결함 / ‘근대화’ 개념을 비판적으로 적용함 / 전쟁의 거시서사와 개인 경험을 연결함 / 현장 질문을 사후 글쓰기로 발전시킴.</div>
+</div></section>
+
+<section class="section compact"><div class="container"><div class="button-row"><a class="button" href="newspaper.html">학교신문 취재모드</a><a class="button alt" href="essays.html">발표문</a><a class="button alt" href="archive.html">옛 사진·지도</a></div></div></section>
+</main>
+<footer><div class="container"><div class="foot-title">포항고 인문사회부 · 2026.10.17</div><p>학생의 결과물은 실제 관찰·질문·자료 활용 과정을 바탕으로 작성합니다.</p></div></footer>
+<script src="data/stops.js"></script><script src="data/outcomes.js"></script><script>
+const D=window.FIELDTRIP, O=window.FIELDTRIP_OUTCOMES;
+const byId=Object.fromEntries(D.stops.map(s=>[s.id,s]));
+document.getElementById('stop-learning').innerHTML=O.stops.map((o,i)=>{const s=byId[o.id];return '<article class="stop"><div class="stop-head"><div class="stop-num">'+s.no+'</div><div><h2>'+s.name+'</h2><div class="address">'+s.time+' · '+s.address+'</div></div></div><div class="stop-body"><div><h3>가서 볼 것</h3><ol>'+o.see.map(x=>'<li>'+x+'</li>').join('')+'</ol></div><aside class="mission"><b>남길 증거</b><p>'+o.record+'</p><b>글쓰기 주제</b><p>'+o.article+'</p><a href="essays.html#'+o.id+'">현장 발표문 →</a></aside></div></article>'}).join('');
+document.getElementById('pathways').innerHTML=O.pathways.map((p,i)=>'<article class="archive-card"><span class="kicker">PATH '+(i+1)+'</span><h3>'+p.name+'</h3><p><b>현장 증거</b><br>'+p.evidence+'</p><p><b>결과물</b><br>'+p.output+'</p><p><b>연계</b><br>'+p.school+'</p></article>').join('');
+</script><script src="assets/register-sw.js"></script></body></html>

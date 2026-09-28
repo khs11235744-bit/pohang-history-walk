@@ -1,8 +1,8 @@
-﻿const CACHE='pohang-history-walk-v3';
+﻿const CACHE='pohang-history-walk-v4';
 const CORE=[
- './','./index.html','./student.html','./essays.html','./archive.html','./teams.html','./teacher.html','./bus.html','./improvements.html',
+ './','./index.html','./student.html','./learning.html','./essays.html','./archive.html','./newspaper.html','./culture.html','./teams.html','./teacher.html','./bus.html','./improvements.html',
  './assets/styles.css','./assets/app.js','./assets/harbor.svg','./assets/waterworks.svg','./assets/memorial.svg','./assets/museum.svg',
- './data/stops.js','./data/improvements.js',
+ './data/stops.js','./data/outcomes.js','./data/improvements.js',
  './assets/history/map-1917.jpg','./assets/history/map-1925.jpg','./assets/history/map-1936.jpg','./assets/history/map-current.png',
  './assets/history/street-honcho-1935.jpg','./assets/history/market-old.jpg','./assets/history/yeongil-bridge-1935.jpg','./assets/history/port-1935.jpg','./assets/history/harbor-boats-old.jpg'
 ];
@@ -14,3 +14,4 @@ self.addEventListener('fetch',e=>{
  if(u.origin!==location.origin)return;
  e.respondWith(caches.match(e.request).then(hit=>hit||fetch(e.request).then(res=>{const copy=res.clone();caches.open(CACHE).then(c=>c.put(e.request,copy));return res}).catch(()=>caches.match('./student.html'))));
 });
+
