@@ -1,0 +1,51 @@
+﻿<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>발표팀 편성 | 포항고 인문학 역사기행</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/styles.css"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#8b3529"></head><body>
+<header class="site-head"><div class="head-inner"><a class="brand" href="index.html">발표팀 편성 <small>교사용 로컬 도구</small></a><nav class="nav"><a href="student.html">학생 안내</a><a href="essays.html">발표문</a><a href="archive.html">옛 지도·사진</a><a aria-current="page" href="teams.html">발표팀</a></nav></div></header>
+<main id="main">
+<section class="page-hero"><div class="container"><div class="eyebrow">6 TEAMS / 40 STUDENTS</div><h1>여섯 장소,<br>여섯 발표팀.</h1><p class="sub">학생 명단을 한 줄에 한 명씩 붙여 넣으면 7·7·7·7·6·6명으로 자동 편성합니다. 명단은 서버로 전송하지 않고 현재 브라우저에만 남습니다.</p><div class="notice warning"><strong>개인정보</strong>이 페이지는 GitHub Pages에 올라가므로 학생 이름 자체를 코드에 저장하지 않습니다. 배정 결과도 이 기기 로컬저장소에만 저장됩니다.</div></div></section>
+
+<section class="section"><div class="container"><div class="section-head"><div class="section-no">01</div><div><h2>명단 입력</h2><p class="section-intro">리로스쿨이나 엑셀에서 이름 열만 복사해 붙여 넣으면 됩니다. 학번을 함께 넣어도 한 줄 전체를 한 명으로 처리합니다.</p></div></div>
+<div class="team-tool"><label for="names"><b>학생 명단</b></label><textarea id="names" placeholder="예) 20101 홍길동&#10;20102 김학생&#10;…"></textarea><div class="button-row"><button class="button" id="assign" type="button">6개 팀 자동배정</button><button class="button alt" id="restore" type="button">저장된 배정 불러오기</button><button class="button alt" id="clear" type="button">초기화</button><button class="button alt" onclick="window.print()" type="button">인쇄</button></div><p id="msg" aria-live="polite"></p></div>
+<div id="team-grid" class="team-grid"></div>
+</div></section>
+
+<section class="section"><div class="container"><div class="section-head"><div class="section-no">02</div><div><h2>발표팀이 하는 일</h2><p class="section-intro">발표는 글을 그대로 읽는 것이 아니라 현장에서 보이는 것 하나를 덧붙이는 방식으로 진행합니다.</p></div></div>
+<div class="archive-grid">
+<div class="archive-card"><span class="kicker">ROLE 1</span><h3>발표 1</h3><p>발표문 전반부. 장소가 왜 중요한지 1분 30초 정도 설명한다.</p></div>
+<div class="archive-card"><span class="kicker">ROLE 2</span><h3>발표 2</h3><p>발표문 후반부. 현재 풍경과 연결하고 질문을 던진다.</p></div>
+<div class="archive-card"><span class="kicker">ROLE 3</span><h3>사료 담당</h3><p>옛 지도·사진에서 확인할 부분을 미리 찾고 현장에서 보여준다.</p></div>
+<div class="archive-card"><span class="kicker">ROLE 4</span><h3>지도 담당</h3><p>현재 위치와 옛 공간의 방향을 설명한다.</p></div>
+<div class="archive-card"><span class="kicker">ROLE 5</span><h3>사진 담당</h3><p>결과보고용 전체사진과 사료 비교사진을 남긴다.</p></div>
+<div class="archive-card"><span class="kicker">ROLE 6–7</span><h3>기록·시간·안전</h3><p>질문·답변을 기록하고 발표시간과 조 이동을 확인한다.</p></div>
+</div></div></section>
+</main>
+<footer><div class="container"><div class="foot-title">포항고 인문사회부 · 교사용 팀 편성</div><p>학생 명단은 GitHub 저장소나 서버에 저장되지 않습니다.</p></div></footer>
+<script>
+const plans=[
+ {team:'1팀',stop:'영일민속박물관',href:'essays.html#museum',size:7},
+ {team:'2팀',stop:'나루끝·북부시장',href:'essays.html#narukkeut',size:7},
+ {team:'3팀',stop:'동빈내항',href:'essays.html#dongbin',size:7},
+ {team:'4팀',stop:'동빈문화창고1969',href:'essays.html#warehouse',size:7},
+ {team:'5팀',stop:'수도산·덕수공원',href:'essays.html#deoksu',size:6},
+ {team:'6팀',stop:'학도의용군전승기념관',href:'essays.html#memorial',size:6}
+];
+const roles=['발표 1','발표 2','사료','지도','사진','기록','시간·안전'];
+const grid=document.getElementById('team-grid'), names=document.getElementById('names'),msg=document.getElementById('msg');
+function shuffle(a){for(let i=a.length-1;i>0;i--){const x=new Uint32Array(1);crypto.getRandomValues(x);const j=x[0]%(i+1);[a[i],a[j]]=[a[j],a[i]]}return a}
+function render(groups){
+ grid.innerHTML=plans.map((p,i)=>{const arr=groups?.[i]||[];return '<section class="team-card"><div class="kicker">'+p.team+'</div><h3>'+p.stop+'</h3><div class="team-stop"><a href="'+p.href+'">발표문 바로가기 →</a></div><ol>'+Array.from({length:p.size},(_,k)=>'<li><b>'+(roles[k]||'기록')+'</b> · '+(arr[k]||'________________')+'</li>').join('')+'</ol><div class="team-roles">발표 전 5분 준비 → 3~4분 발표 → 현장 질문 1개 → 사진 2장</div></section>'}).join('');
+}
+function assign(){
+ const list=names.value.split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
+ if(!list.length){msg.textContent='명단을 입력해 주세요.';return}
+ if(list.length!==40) msg.textContent='현재 '+list.length+'명입니다. 기본 정원 40명과 다르므로 앞 팀부터 정원만큼 배정합니다.';
+ else msg.textContent='40명을 7·7·7·7·6·6명으로 배정했습니다.';
+ const pool=shuffle([...list]),groups=[];let n=0;
+ plans.forEach(p=>{groups.push(pool.slice(n,n+p.size));n+=p.size});
+ if(pool.length>40){groups[5].push(...pool.slice(40));}
+ localStorage.setItem('pohang-team-names',names.value);localStorage.setItem('pohang-team-groups',JSON.stringify(groups));render(groups);
+}
+document.getElementById('assign').onclick=assign;
+document.getElementById('restore').onclick=()=>{names.value=localStorage.getItem('pohang-team-names')||'';try{render(JSON.parse(localStorage.getItem('pohang-team-groups')||'null'));msg.textContent='이 기기에 저장된 배정을 불러왔습니다.'}catch(e){render();}};
+document.getElementById('clear').onclick=()=>{names.value='';localStorage.removeItem('pohang-team-names');localStorage.removeItem('pohang-team-groups');render();msg.textContent='초기화했습니다.'};
+render();
+</script><script src="assets/register-sw.js"></script></body></html>

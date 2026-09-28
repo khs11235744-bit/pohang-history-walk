@@ -1,0 +1,16 @@
+{
+  "name": "포항, 물길에서 전쟁까지",
+  "short_name": "포항 인문학기행",
+  "start_url": "./student.html",
+  "display": "standalone",
+  "background_color": "#f3efe5",
+  "theme_color": "#8b3529",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

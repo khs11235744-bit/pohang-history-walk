@@ -17,7 +17,7 @@
  function studentStops(){
    return D.stops.filter(s=>!['school','school-back'].includes(s.id)).map(s=>`<article class="stop" id="${s.id}">
     <div class="stop-head"><div class="stop-num">${s.no}</div><div><h2>${s.name}</h2><div class="address">${s.address}</div><div class="coord">${s.lat.toFixed(6)}, ${s.lon.toFixed(6)} · ${s.verify}</div>${links(s)}</div></div>
-    <div class="stop-body"><div><p class="lead">${s.teaser}</p><p>${s.abstract||''}</p></div><aside class="mission"><b>현장 미션</b><p>${s.mission||'다음 지점으로 이동하기 전, 가장 기억에 남는 장면을 한 줄로 기록한다.'}</p><a href="essays.html#${s.id}">이 장소의 3분 발표문 읽기 →</a></aside></div>
+    <div class="stop-body"><div>${s.historyImage?`<figure class="stop-photo"><img loading="lazy" src="${s.historyImage}" alt="${s.historyCaption||s.name}"><figcaption>${s.historyCaption||'역사 자료'}</figcaption></figure>`:''}<p class="lead">${s.teaser}</p><p>${s.abstract||''}</p></div><aside class="mission"><b>현장 미션</b><p>${s.mission||'다음 지점으로 이동하기 전, 가장 기억에 남는 장면을 한 줄로 기록한다.'}</p><a href="essays.html#${s.id}">이 장소의 3분 발표문 읽기 →</a>${s.historyImage?'<br><a href="archive.html">옛 지도·사진 더 보기 →</a>':''}</aside></div>
    </article>`).join('');
  }
  function essays(){
