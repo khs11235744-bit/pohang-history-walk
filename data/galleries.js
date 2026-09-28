@@ -12,8 +12,8 @@ B:[
  {src:"assets/waterworks.svg",alt:"수도산 상수도 도해",cap:"근대 기반시설의 편리함과 식민지 권력관계를 함께 읽는다."}
 ],
 C:[
- {src:"assets/independence.svg",alt:"3·1운동 기억공간 도해",cap:"기념관이 있는 장소와 실제 사건이 벌어진 장소를 구분한다."},
- {src:"assets/hyanggyo.svg",alt:"흥해향교 도해",cap:"조선시대 지역교육과 현대 학교의 목적을 비교한다."},
- {src:"assets/museum.svg",alt:"영일민속박물관 생활사 도해",cap:"제도와 정치사 뒤에 있는 평범한 주민의 생활을 본다."},
- {src:"assets/memorial.svg",alt:"학도의용군과 전쟁 기억 도해",cap:"독립운동 기념공간과 전쟁기념관의 기억방식을 비교한다."}
+ {src:"assets/fortress.svg",alt:"장기읍성 도해",cap:"바다가 내려다보이는 지형에서 해안 방어와 읍성의 위치를 읽는다."},
+ {src:"assets/exile.svg",alt:"장기 유배문화 도해",cap:"유배를 정치적 처벌이자 지역사회와 지식이 만나는 공간으로 본다."},
+ {src:"assets/guryongpo-house.svg",alt:"구룡포 일본인가옥거리 도해",cap:"수산업·일본인 이주·주거공간·관광지화를 한 장소에서 비교한다."},
+ {src:"assets/ara.svg",alt:"구룡포 아라예술촌 도해",cap:"역사공간이 오늘의 생활문화 공간으로 다시 사용되는 과정을 본다."}
 ]};

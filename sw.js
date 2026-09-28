@@ -1,4 +1,4 @@
-﻿const CACHE='pohang-history-walk-v9';
+﻿const CACHE='pohang-history-walk-v8';
 const CORE=[
  './','./index.html','./student.html','./learning.html','./essays.html','./archive.html','./newspaper.html','./culture.html','./film.html','./budget.html','./plans.html','./plan-a.html','./plan-b.html','./plan-c.html','./teams.html','./teacher.html','./bus.html','./improvements.html',
  './assets/styles.css','./assets/app.js','./assets/harbor.svg','./assets/coast.svg','./assets/lighthouse.svg','./assets/independence.svg','./assets/hyanggyo.svg','./assets/waterworks.svg','./assets/memorial.svg','./assets/museum.svg',
