@@ -12,8 +12,8 @@ B:[
  {src:"assets/waterworks.svg",alt:"수도산 상수도 도해",cap:"근대 기반시설의 편리함과 식민지 권력관계를 함께 읽는다."}
 ],
 C:[
- {src:"assets/fortress.svg",alt:"장기읍성 도해",cap:"바다가 내려다보이는 지형에서 해안 방어와 읍성의 위치를 읽는다."},
- {src:"assets/exile.svg",alt:"장기 유배문화 도해",cap:"유배를 정치적 처벌이자 지역사회와 지식이 만나는 공간으로 본다."},
- {src:"assets/guryongpo-house.svg",alt:"구룡포 일본인가옥거리 도해",cap:"수산업·일본인 이주·주거공간·관광지화를 한 장소에서 비교한다."},
- {src:"assets/ara.svg",alt:"구룡포 아라예술촌 도해",cap:"역사공간이 오늘의 생활문화 공간으로 다시 사용되는 과정을 본다."}
+ {src:"assets/gyeongju-tomb.svg",alt:"대릉원 고분 도해",cap:"봉분의 크기와 배치에서 장례와 권력의 표현을 읽는다."},
+ {src:"assets/gyeongju-excavation.svg",alt:"쪽샘유적발굴관 도해",cap:"발굴현장에서 관찰·추론·불확실성을 구분한다."},
+ {src:"assets/gyeongju-gyochon.svg",alt:"경주교촌마을·최부자댁 도해",cap:"부·교육·공공성의 관계를 공간과 육훈으로 살펴본다."},
+ {src:"assets/gyeongju-museum.svg",alt:"국립경주박물관 도해",cap:"유물의 선택·배열·설명문이 과거를 어떻게 구성하는지 본다."}
 ]};
