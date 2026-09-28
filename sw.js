@@ -1,7 +1,7 @@
-﻿const CACHE='pohang-history-walk-v8';
+﻿const CACHE='pohang-history-walk-v9';
 const CORE=[
  './','./index.html','./student.html','./learning.html','./essays.html','./archive.html','./newspaper.html','./culture.html','./film.html','./budget.html','./plans.html','./plan-a.html','./plan-b.html','./plan-c.html','./teams.html','./teacher.html','./bus.html','./improvements.html',
- './assets/styles.css','./assets/app.js','./assets/harbor.svg','./assets/waterworks.svg','./assets/memorial.svg','./assets/museum.svg',
+ './assets/styles.css','./assets/app.js','./assets/harbor.svg','./assets/coast.svg','./assets/lighthouse.svg','./assets/independence.svg','./assets/hyanggyo.svg','./assets/waterworks.svg','./assets/memorial.svg','./assets/museum.svg',
  './data/stops.js','./data/outcomes.js','./data/film.js','./data/budget.js','./data/plans.js','./data/routes.js','./data/route-essays.js','./data/galleries.js','./data/improvements.js','./assets/route-plan.js','./assets/lighthouse.svg','./assets/coast.svg',
  './assets/history/map-1917.jpg','./assets/history/map-1925.jpg','./assets/history/map-1936.jpg','./assets/history/map-current.png',
  './assets/history/street-honcho-1935.jpg','./assets/history/market-old.jpg','./assets/history/yeongil-bridge-1935.jpg','./assets/history/port-1935.jpg','./assets/history/harbor-boats-old.jpg'
