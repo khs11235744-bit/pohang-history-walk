@@ -23,10 +23,10 @@
   }
   const toolbar=el('div','depth-toolbar');const row=el('div','depth-links');
   const all=el('a','',code+'안 요록 전체 읽기');all.href='guide-'+code.toLowerCase()+'.html';
-  const extra=el('a','','관련 해설·기록지');extra.href='#depth-supplement';row.append(all,extra);toolbar.append(row);stops.before(toolbar);
-  const supplement=el('section','depth-supplement depth-content');supplement.id='depth-supplement';supplement.append(el('h2','','관련 해설·기록지·출전'));
+  const extra=el('a','','이어 읽기·출전');extra.href='#depth-supplement';const teacher=el('a','','교사용 활동·운영');teacher.href='teacher-reading-notes.html#'+code.toLowerCase()+'-teacher-notes';row.append(all,extra,teacher);toolbar.append(row);stops.before(toolbar);
+  const supplement=el('section','depth-supplement depth-content');supplement.id='depth-supplement';supplement.append(el('h2','','이어 읽기·출전'));
   guide.supplement.forEach(id=>{const c=chapters[id],d=el('details','');d.id=prefix+id;d.append(el('summary','',c.title));fill(d,c);supplement.append(d)});stops.after(supplement);
-  document.documentElement.dataset.depthReady='editorial-v18';document.documentElement.dataset.depthPlan=code;
+  document.documentElement.dataset.depthReady='student-history-v20';document.documentElement.dataset.depthPlan=code;
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
 })();

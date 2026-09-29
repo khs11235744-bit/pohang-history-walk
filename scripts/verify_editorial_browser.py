@@ -21,7 +21,7 @@ try:
    page.set_viewport_size({'width':width,'height':980})
    for file in ['index.html','guide-a.html','guide-b.html','guide-c.html','plan-a.html','plan-b.html','plan-c.html']:
     page.goto(BASE+file,wait_until='domcontentloaded',timeout=45000)
-    if file.startswith('plan-'):page.wait_for_function("document.documentElement.dataset.depthReady==='editorial-v18'",timeout=20000)
+    if file.startswith('plan-'):page.wait_for_function("document.documentElement.dataset.depthReady==='student-history-v20'",timeout=20000)
     page.wait_for_timeout(200)
     metrics=page.evaluate('({viewport:innerWidth,width:document.documentElement.scrollWidth,h1:document.querySelector("h1").getBoundingClientRect().top})')
     assert metrics['width']<=width+1,(file,width,metrics)
@@ -59,20 +59,20 @@ try:
   before=page.locator('details[open]').count();page.evaluate('dispatchEvent(new Event("beforeprint"))');assert page.locator('details:not([open])').count()==0
   page.evaluate('dispatchEvent(new Event("afterprint"))');assert page.locator('details[open]').count()==before
   record('font persistence and print disclosure restore')
-  page.goto(BASE+'plan-a.html',wait_until='domcontentloaded');page.wait_for_function("document.documentElement.dataset.depthReady==='editorial-v18'")
+  page.goto(BASE+'plan-a.html',wait_until='domcontentloaded');page.wait_for_function("document.documentElement.dataset.depthReady==='student-history-v20'")
   page.locator('.field-ops summary').first.click();box=page.locator('[data-headcount]').first;box.check();page.reload(wait_until='domcontentloaded');assert page.locator('[data-headcount]').first.is_checked();record('existing headcount storage')
   # Route fallback without a map library must retain place content.
-  fallback=browser.new_context();fallback.route('**/*leaflet*.js',lambda r:r.abort());fpage=fallback.new_page();fpage.goto(BASE+'plan-b.html',wait_until='domcontentloaded');fpage.wait_for_function("document.documentElement.dataset.depthReady==='editorial-v18'")
+  fallback=browser.new_context();fallback.route('**/*leaflet*.js',lambda r:r.abort());fpage=fallback.new_page();fpage.goto(BASE+'plan-b.html',wait_until='domcontentloaded');fpage.wait_for_function("document.documentElement.dataset.depthReady==='student-history-v20'")
   assert fpage.locator('#plan-map').inner_text();assert fpage.locator('#stops article.stop').count()>=4;record('map unavailable retains addresses and readers');fallback.close()
   # Text remains readable with JS disabled.
-  nojs=browser.new_context(java_script_enabled=False);npage=nojs.new_page();npage.goto(BASE+'guide-c.html',wait_until='domcontentloaded');assert npage.locator('.guide-chapter').count()==15 and npage.locator('#primary-nav').is_visible();record('no-JavaScript reader');nojs.close()
+  nojs=browser.new_context(java_script_enabled=False);npage=nojs.new_page();npage.goto(BASE+'guide-c.html',wait_until='domcontentloaded');assert npage.locator('.guide-chapter').count()==12 and npage.locator('#primary-nav').is_visible();record('no-JavaScript reader');nojs.close()
   # Wait for installed, claimed cache and verify actual members before disconnecting.
   page.goto(BASE+'index.html',wait_until='domcontentloaded');page.wait_for_function('!!navigator.serviceWorker.controller',timeout=60000)
-  keys=page.evaluate('async()=>{await navigator.serviceWorker.ready;return caches.keys()}');assert any('v19-place-history' in k for k in keys),keys
-  cache=page.evaluate("async()=>{const c=await caches.open('pohang-history-walk-v19-place-history-20260930');return (await c.keys()).map(x=>new URL(x.url).pathname)}")
+  keys=page.evaluate('async()=>{await navigator.serviceWorker.ready;return caches.keys()}');assert any('v20-student-reading' in k for k in keys),keys
+  cache=page.evaluate("async()=>{const c=await caches.open('pohang-history-walk-v20-student-reading-20260930');return (await c.keys()).map(x=>new URL(x.url).pathname)}")
   for file in ['guide-a.html','guide-b.html','guide-c.html','assets/editorial.css','assets/editorial.js','assets/register-sw.js']:assert any(x.endswith('/'+file) for x in cache),file
   context.set_offline(True)
-  for c,n in [('a',16),('b',14),('c',15)]:
+  for c,n in [('a',12),('b',11),('c',12)]:
    page.goto(BASE+'guide-'+c+'.html',wait_until='domcontentloaded');assert page.locator('.guide-chapter').count()==n;assert page.locator('#reader-search').is_visible();page.locator('#reader-search').fill('자료');page.wait_for_timeout(240);assert page.locator('#reader-search-results li').count()>0
   fail=page.evaluate("async()=>{try{await fetch('assets/intentionally-missing-editorial-test.js');return 'unexpected response'}catch{return 'network error'}}");assert fail=='network error',fail
   record('offline A/B/C text, CSS, JS, search and missing-asset error',{'cacheEntries':len(cache),'caches':keys})

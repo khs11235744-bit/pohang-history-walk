@@ -1,0 +1,83 @@
+{
+  "baseline": "95c210e0badfe98445e75f30f247e21ed2e3d1da",
+  "counts": {
+    "A": {
+      "chapters": 12,
+      "essays": 9,
+      "essay_chars": [
+        2960,
+        2942,
+        3062,
+        3098,
+        2914,
+        3241,
+        3029,
+        2930,
+        2965
+      ],
+      "total_chars": 28926
+    },
+    "B": {
+      "chapters": 11,
+      "essays": 8,
+      "essay_chars": [
+        2812,
+        2838,
+        2852,
+        2931,
+        2960,
+        2965,
+        3241,
+        2946
+      ],
+      "total_chars": 25708
+    },
+    "C": {
+      "chapters": 12,
+      "essays": 9,
+      "essay_chars": [
+        2948,
+        2821,
+        2825,
+        3000,
+        2941,
+        2724,
+        2747,
+        3008,
+        3058
+      ],
+      "total_chars": 28441
+    }
+  },
+  "tests": {
+    "unittest": 27,
+    "static_links": 601,
+    "service_worker_scope": "PASS"
+  },
+  "word_visual_review": {
+    "A": 26,
+    "B": 21,
+    "C": 22,
+    "all_pages_reviewed": true
+  },
+  "browser": {
+    "container": "not run: managed browser blocks loopback URL",
+    "remote": {
+      "browser": "Google Chrome",
+      "passed": 28,
+      "failed": 0,
+      "page_errors": [],
+      "responsive_widths": [
+        390,
+        768,
+        1440
+      ],
+      "offline_readers": true
+    }
+  },
+  "remote_build": {
+    "reviewed_source_hashes_match": true,
+    "reviewed_docx_parts_match": true,
+    "unexpected_existing_file_changes": 0
+  }
+}

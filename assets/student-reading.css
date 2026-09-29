@@ -1,0 +1,13 @@
+/* Historical reader: quiet source notes and a separate teacher notebook. */
+.guide-body .source-note{font-size:.87rem;line-height:1.6;margin:.6rem 0 1.5rem;color:#5a5852;overflow-wrap:anywhere}
+.guide-body .source-note a{color:inherit;text-decoration-color:#c5bfb3;text-underline-offset:3px}
+.guide-body .source-entry{font-size:.95rem;line-height:1.75;overflow-wrap:anywhere}
+.guide-body .source-entry a{overflow-wrap:anywhere}
+.guide-body table caption{text-align:left;font-weight:600;padding:.65rem 0}
+.teacher-note-section{margin:3rem 0;scroll-margin-top:6rem}
+.teacher-note-section details{border-top:1px solid #c9c4ba;padding:1rem 0}
+.teacher-note-section summary{cursor:pointer;font-size:1.1rem;font-weight:600;line-height:1.6}
+.teacher-note-body{max-width:78ch;margin:1rem 0;line-height:1.9}
+.teacher-note-body .table-wrap{overflow:auto}
+.teacher-reading-notes{max-width:1100px;margin:0 auto;padding:2rem 24px 4rem}
+@media print{.reader-cover .reader-actions,.reader-controls,.reader-outline,.reader-search-status,.reader-search-results,.reader-next,.reader-top{display:none!important}.reader-layout{display:block}.source-note,.source-entry{font-size:9pt!important}.source-figure{break-inside:avoid}h2,h3{break-after:avoid}.guide-chapter{break-inside:auto}.guide-body p{orphans:3;widows:3}}

@@ -27,11 +27,11 @@ class EditorialAcceptance(unittest.TestCase):
    self.assertTrue(s.select_one('#reader-search-status[role="status"]'))
    self.assertTrue(s.select_one('[data-reader-size]'))
  def test_history_and_routes_preserved(self):
-  self.assertEqual(len(soup('guide-a.html').select('.guide-chapter')),16)
-  self.assertEqual(len(soup('guide-b.html').select('.guide-chapter')),14)
-  self.assertEqual(len(soup('guide-c.html').select('.guide-chapter')),15)
+  self.assertEqual(len(soup('guide-a.html').select('.guide-chapter')),12)
+  self.assertEqual(len(soup('guide-b.html').select('.guide-chapter')),11)
+  self.assertEqual(len(soup('guide-c.html').select('.guide-chapter')),12)
   for code in 'abc':
-   self.assertGreater(len(soup(f'guide-{code}.html').select_one('.guide-body').get_text()),27000)
+   self.assertGreater(len(soup(f'guide-{code}.html').select_one('.guide-body').get_text()),24000)
   a=soup('guide-a.html').get_text()
   for date in ['1835','1983','1930','1932','1923','1926','1950']:
    self.assertIn(date,a)
@@ -51,7 +51,7 @@ class EditorialAcceptance(unittest.TestCase):
   sw=(ROOT/'sw.js').read_text()
   self.assertIn("request.mode === 'navigate'",sw)
   self.assertNotIn("catch(()=>caches.match('./student.html'))",sw)
-  self.assertIn('pohang-history-walk-v19',sw)
+  self.assertIn('pohang-history-walk-v20',sw)
  def test_reading_panels_have_native_disclosure(self):
   js=(ROOT/'assets/depth-guides.js').read_text()
   self.assertIn("el('details'",js)
