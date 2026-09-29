@@ -155,5 +155,30 @@
         "title": "250만원 예산안 | 포항고 인문학 역사기행"
       }
     ]
+  },
+  "offline_cache": {
+    "version": "pohang-history-walk-v17-depth-20260929-live2",
+    "unique_core_assets": 83,
+    "status": "PASS",
+    "guides": [
+      {
+        "guide": "a",
+        "http": 200,
+        "from_service_worker": true,
+        "chars": 40626
+      },
+      {
+        "guide": "b",
+        "http": 200,
+        "from_service_worker": true,
+        "chars": 36493
+      },
+      {
+        "guide": "c",
+        "http": 200,
+        "from_service_worker": true,
+        "chars": 37048
+      }
+    ]
   }
 }

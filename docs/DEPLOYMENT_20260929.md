@@ -14,6 +14,10 @@
 
 기존 Pages 빌드에만 있던 `assets/css/style.css`를 동일 바이트로 포함했다. 이 파일은 교체본의 출전·변경 기록 HTML의 스타일 참조를 보존한다.
 
-서비스 워커의 구 버전 캐시 정리는 `pohang-history-walk-` 접두사에만 적용한다. 같은 도메인의 다른 프로젝트 캐시를 삭제하지 않는다. 회귀검사는 `node scripts/check_sw_scope.cjs`로 실행한다. 캐시 버전은 `pohang-history-walk-v17-depth-20260929-live1`이다.
+서비스 워커의 구 버전 캐시 정리는 `pohang-history-walk-` 접두사에만 적용한다. 같은 도메인의 다른 프로젝트 캐시를 삭제하지 않는다. 회귀검사는 `node scripts/check_sw_scope.cjs`로 실행한다. 캐시 버전은 `pohang-history-walk-v17-depth-20260929-live2`이다.
 
 이 파일은 배포 전 검증 기록이며 온라인 배포 성공을 미리 선언하지 않는다. 공개 반영은 이 변경이 포함된 커밋의 GitHub Pages 빌드 성공과 공개 URL 검증으로 확인한다. 이전 `depth-verification.json`의 403 기록은 교체본 제작 단계 이력이다.
+
+## 오프라인 저장 보완 검증
+
+중복 캐시 키 두 개가 같은 일괄 저장 요청에 들어가던 문제를 제거했다. 고유 자원 83개를 저장한 뒤 네트워크를 끊은 실제 Edge 환경에서 A·B·C 요록이 모두 서비스 워커 응답 HTTP 200으로 열리는 것을 확인했다. Word 파일 다운로드는 온라인 검증 항목이다.

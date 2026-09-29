@@ -1,4 +1,4 @@
-const CACHE='pohang-history-walk-v17-depth-20260929-live1';
+const CACHE='pohang-history-walk-v17-depth-20260929-live2';
 const CORE=[
  './guide-a.html','./guide-b.html','./guide-c.html','./assets/depth-guides.css','./assets/depth-guides.js','./data/depth-guides.js','./assets/depth/a-chapter-5-map-2.jpg','./assets/depth/a-chapter-5-map-1.jpg',
  './','./index.html','./student.html','./learning.html','./survey.html','./teacher-evidence.html','./essays.html','./archive.html','./newspaper.html','./culture.html','./film.html','./budget.html','./plans.html','./plan-a.html','./plan-b.html','./plan-c.html','./teams.html','./teacher.html','./bus.html','./recon.html','./improvements.html',
@@ -8,7 +8,7 @@ const CORE=[
  './assets/history/street-honcho-1935.jpg','./assets/history/market-old.jpg','./assets/history/yeongil-bridge-1935.jpg','./assets/history/port-1935.jpg','./assets/history/harbor-boats-old.jpg',
  './assets/photos/homigot.jpg','./assets/photos/yeongil-museum.jpg','./assets/photos/student-memorial.png','./assets/photos/daereungwon.jpg','./assets/photos/jjoksaem.jpg','./assets/photos/gyochon.jpg','./assets/photos/gyeongju-museum.jpg','./assets/qr/history-trip-survey.png','./assets/qr/history-trip-pre-record.png','./assets/qr/history-trip-post-record.png'
 ];
-self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting()))});
+self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll([...new Set(CORE)])).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('pohang-history-walk-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
 self.addEventListener('fetch',e=>{
  if(e.request.method!=='GET')return;
