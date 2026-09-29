@@ -1,0 +1,159 @@
+{
+  "phase": "PRE_DEPLOYMENT_VERIFIED",
+  "base_commit": "8bc2a9f420ccc83a88edfd20cfb5351ee9340c77",
+  "overlay_sha256": "b2592844a434aeda2b542eb39f19a0386c0a9927ae4c990770759e4209d22c7c",
+  "approved_files": 24,
+  "unchanged_original_files": 78,
+  "static_links": 361,
+  "javascript_syntax": "PASS",
+  "service_worker_cache_isolation": "PASS",
+  "browser": {
+    "a": [
+      {
+        "page": "plan-a.html",
+        "http": 200,
+        "plan": "A",
+        "panels": 6,
+        "inline": 7,
+        "supplement": 6,
+        "students": 6,
+        "worksheets": 6,
+        "schedule": 10,
+        "text": 30199,
+        "mapLoaded": true,
+        "rain": "PASS",
+        "mobile": {
+          "width": 390,
+          "scroll": 390
+        }
+      },
+      {
+        "page": "guide-a.html",
+        "http": 200,
+        "chapters": 16,
+        "chars": 40626,
+        "width": 390,
+        "scroll": 390,
+        "downloads": [
+          "downloads/pohang_plan_A_in_depth_integrated_2026.docx"
+        ],
+        "missingAnchors": [],
+        "download_receipts": [
+          {
+            "path": "downloads/pohang_plan_A_in_depth_integrated_2026.docx",
+            "bytes": 606414,
+            "sha256": "d7bb06731e570154641ae80dd081634ec8da2cf8acca857c32083d8b23ae887b",
+            "http": 200
+          }
+        ]
+      }
+    ],
+    "b": [
+      {
+        "page": "plan-b.html",
+        "http": 200,
+        "plan": "B",
+        "panels": 4,
+        "inline": 7,
+        "supplement": 5,
+        "students": 4,
+        "worksheets": 4,
+        "schedule": 10,
+        "text": 27209,
+        "mapLoaded": true,
+        "rain": "PASS",
+        "mobile": {
+          "width": 390,
+          "scroll": 390
+        }
+      },
+      {
+        "page": "guide-b.html",
+        "http": 200,
+        "chapters": 14,
+        "chars": 36493,
+        "width": 390,
+        "scroll": 390,
+        "downloads": [
+          "downloads/pohang_plan_B_in_depth_integrated_2026.docx"
+        ],
+        "missingAnchors": [],
+        "download_receipts": [
+          {
+            "path": "downloads/pohang_plan_B_in_depth_integrated_2026.docx",
+            "bytes": 74356,
+            "sha256": "ddb32e85c3b1a94246e40be32f9213fcc1b718484f2d6d9a9181052d0c06ae4e",
+            "http": 200
+          }
+        ]
+      }
+    ],
+    "c": [
+      {
+        "page": "plan-c.html",
+        "http": 200,
+        "plan": "C",
+        "panels": 4,
+        "inline": 9,
+        "supplement": 4,
+        "students": 4,
+        "worksheets": 4,
+        "schedule": 10,
+        "text": 32667,
+        "mapLoaded": true,
+        "rain": "PASS",
+        "mobile": {
+          "width": 390,
+          "scroll": 390
+        }
+      },
+      {
+        "page": "guide-c.html",
+        "http": 200,
+        "chapters": 15,
+        "chars": 37048,
+        "width": 390,
+        "scroll": 390,
+        "downloads": [
+          "downloads/pohang_plan_C_in_depth_integrated_2026.docx"
+        ],
+        "missingAnchors": [],
+        "download_receipts": [
+          {
+            "path": "downloads/pohang_plan_C_in_depth_integrated_2026.docx",
+            "bytes": 73079,
+            "sha256": "431893a6bb55b5379a35d7ffdc300aa4a731ea8780d2235cba6b0f339aba8958",
+            "http": 200
+          }
+        ]
+      }
+    ],
+    "index": [
+      {
+        "page": "index.html",
+        "status": 200,
+        "title": "2026 포항고 인문학 역사기행 | 10월 17일",
+        "guides": 3,
+        "mobile": {
+          "width": 390,
+          "scroll": 390
+        }
+      },
+      {
+        "page": "learning.html",
+        "status": 200,
+        "title": "학습지·교과연계 인덱스 | 포항고 인문학 역사기행"
+      },
+      {
+        "page": "survey.html",
+        "status": 200,
+        "title": "학생 탐구·세특 기록 | 포항고 인문학 역사기행"
+      },
+      {
+        "page": "budget.html",
+        "status": 200,
+        "title": "250만원 예산안 | 포항고 인문학 역사기행"
+      }
+    ]
+  }
+}

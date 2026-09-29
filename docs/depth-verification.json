@@ -1,0 +1,241 @@
+{
+  "status": "FILES_INTEGRATED_NOT_DEPLOYED",
+  "repository": "khs11235744-bit/pohang-history-walk",
+  "base_commit": "8bc2a9f420ccc83a88edfd20cfb5351ee9340c77",
+  "github_write": "403 Resource not accessible by integration",
+  "guide_counts": {
+    "A": {
+      "total_chars": 40375,
+      "chapters": 16,
+      "core_essays": 9,
+      "essay_chars": {
+        "chapter-3": 3105,
+        "chapter-4": 3084,
+        "chapter-5": 3761,
+        "chapter-6": 3149,
+        "chapter-7": 2733,
+        "chapter-8": 3455,
+        "chapter-9": 2796,
+        "chapter-10": 2961,
+        "chapter-11": 3404
+      }
+    },
+    "B": {
+      "total_chars": 36263,
+      "chapters": 14,
+      "core_essays": 8,
+      "essay_chars": {
+        "essay-01": 2783,
+        "essay-02": 2706,
+        "essay-03": 2908,
+        "essay-04": 2697,
+        "essay-05": 3623,
+        "essay-06": 3924,
+        "essay-07": 3955,
+        "essay-08": 2489
+      }
+    },
+    "C": {
+      "total_chars": 36807,
+      "chapters": 15,
+      "core_essays": 9,
+      "essay_chars": {
+        "essay-01": 3074,
+        "essay-02": 3059,
+        "essay-03": 2954,
+        "essay-04": 3153,
+        "essay-05": 3076,
+        "essay-06": 2965,
+        "essay-07": 3081,
+        "essay-08": 2985,
+        "essay-09": 3453
+      }
+    }
+  },
+  "docx_pages": {
+    "A": 33,
+    "B": 30,
+    "C": 28
+  },
+  "browser_test": {
+    "mode": "in-memory Chromium DOM/layout tests; URL navigation blocked by runtime policy",
+    "checks": [
+      {
+        "page": "plan-a",
+        "note_panels": 6,
+        "inline_essays": 7,
+        "mobile_width": {
+          "width": 390,
+          "scroll": 390
+        },
+        "runtime_errors": [],
+        "rain_selector": "pass",
+        "headcount_storage_adapter": "pass"
+      },
+      {
+        "page": "plan-b",
+        "note_panels": 4,
+        "inline_essays": 7,
+        "mobile_width": {
+          "width": 390,
+          "scroll": 390
+        },
+        "runtime_errors": [],
+        "rain_selector": "pass",
+        "headcount_storage_adapter": "pass"
+      },
+      {
+        "page": "plan-c",
+        "note_panels": 4,
+        "inline_essays": 9,
+        "mobile_width": {
+          "width": 390,
+          "scroll": 390
+        },
+        "runtime_errors": [],
+        "rain_selector": "pass",
+        "headcount_storage_adapter": "pass"
+      },
+      {
+        "page": "standalone",
+        "tabs": "ABC visible selection pass",
+        "mobile_width": "pass",
+        "file_url_navigation": "not tested; blocked by runtime"
+      },
+      {
+        "page": "guide-a",
+        "full_chars": 40626,
+        "desktop_width": "pass"
+      },
+      {
+        "page": "guide-b",
+        "full_chars": 36493,
+        "desktop_width": "pass"
+      },
+      {
+        "page": "guide-c",
+        "full_chars": 37048,
+        "desktop_width": "pass"
+      }
+    ]
+  },
+  "changed_files": [
+    {
+      "path": "CHANGELOG.html",
+      "sha256": "4e635bd574c35ea648cedaca9ae5cf2ceaa1dfde2fc30b81356f9165ec7a4ab8",
+      "bytes": 14843
+    },
+    {
+      "path": "READ_FIRST_DEPTH.md",
+      "sha256": "104cb87a5d41b45cf1e668aa763da0f71db7eb2b9fa7b7b75214ac5d4048dd74",
+      "bytes": 4597
+    },
+    {
+      "path": "assets/depth/a-chapter-5-map-1.jpg",
+      "sha256": "3786473ea3436d0292fcefea9687aacfc617d78af3a011f2c6a471faf1e8067e",
+      "bytes": 266425
+    },
+    {
+      "path": "assets/depth/a-chapter-5-map-2.jpg",
+      "sha256": "24c9de03cf165ad6bb3ae7c9c76cc6b55f840983a72608da8516df0417485648",
+      "bytes": 259703
+    },
+    {
+      "path": "assets/depth-guides.css",
+      "sha256": "87d530b328afa89b71f5ab3789dd10dbf40a20bc944765a3c88469fb14e69c62",
+      "bytes": 5926
+    },
+    {
+      "path": "assets/depth-guides.js",
+      "sha256": "e750f0905a57a8621106c2efb2187c49435af9f5039e26b840584f2ad761c7a7",
+      "bytes": 3109
+    },
+    {
+      "path": "data/depth-guides.js",
+      "sha256": "736a3b42f0e1891131db91bfe8e515292a449a62a603eff6ad15bf5bad691e54",
+      "bytes": 289813
+    },
+    {
+      "path": "docs/DEPTH_GUIDES_20260929.md",
+      "sha256": "104cb87a5d41b45cf1e668aa763da0f71db7eb2b9fa7b7b75214ac5d4048dd74",
+      "bytes": 4597
+    },
+    {
+      "path": "docs/HADES_100.html",
+      "sha256": "961bc30cd28febd8c5bb8e1c5233968d17e8e8c5953700f1d6af57b95b87637b",
+      "bytes": 23647
+    },
+    {
+      "path": "docs/SOURCES.html",
+      "sha256": "32c5821a843e44f1478882cb8750f018a1bcc9fb32801c18fa68b60d2636d9d8",
+      "bytes": 15941
+    },
+    {
+      "path": "downloads/pohang_plan_A_in_depth_integrated_2026.docx",
+      "sha256": "d7bb06731e570154641ae80dd081634ec8da2cf8acca857c32083d8b23ae887b",
+      "bytes": 606414
+    },
+    {
+      "path": "downloads/pohang_plan_B_in_depth_integrated_2026.docx",
+      "sha256": "ddb32e85c3b1a94246e40be32f9213fcc1b718484f2d6d9a9181052d0c06ae4e",
+      "bytes": 74356
+    },
+    {
+      "path": "downloads/pohang_plan_C_in_depth_integrated_2026.docx",
+      "sha256": "431893a6bb55b5379a35d7ffdc300aa4a731ea8780d2235cba6b0f339aba8958",
+      "bytes": 73079
+    },
+    {
+      "path": "essays.html",
+      "sha256": "6d9373a2e1324a0f3a5562d7e08e381aeda7fcb3227541bad5f24ee8cb79b473",
+      "bytes": 3906
+    },
+    {
+      "path": "guide-a.html",
+      "sha256": "2bca48b3a310eb6193138c0695ac37ed78909b612ac717fb5d9a8e2a5250d4d6",
+      "bytes": 105724
+    },
+    {
+      "path": "guide-b.html",
+      "sha256": "fd86226ef789b11e2eadf028043acf535d0ffbbcb3453e8e008f9548d7c8eb9f",
+      "bytes": 94481
+    },
+    {
+      "path": "guide-c.html",
+      "sha256": "10e0bda26174bab8b047b0c3ff7df3763826d257bd37ad00c9e26639fbf87593",
+      "bytes": 96561
+    },
+    {
+      "path": "index.html",
+      "sha256": "27497a500a60dc82518d1eec4d0bb1c755fa21db2a84a5cc0e55f58b3179c616",
+      "bytes": 8066
+    },
+    {
+      "path": "plan-a.html",
+      "sha256": "9169d14502affde00d5708258905c0129cb39e744766739b866d866515173820",
+      "bytes": 5290
+    },
+    {
+      "path": "plan-b.html",
+      "sha256": "36951e35c84f86b1fe977cc225bd207d248f6bbf0a19a5a1f0d3e8a6c2bad09c",
+      "bytes": 5290
+    },
+    {
+      "path": "plan-c.html",
+      "sha256": "29d83e7f99f2741493a8f64ae293ee7a26b7033c4ac113f7e103228500a92a9d",
+      "bytes": 5290
+    },
+    {
+      "path": "plans.html",
+      "sha256": "4394e358933e63a85146a8332854e6b15abffffcd82e078182490c0c98d4e2de",
+      "bytes": 4840
+    },
+    {
+      "path": "sw.js",
+      "sha256": "160873b43cbfd92aaaf93fe26f281a27006b0cd74e36b0f29fcc956ffc55e578",
+      "bytes": 2879
+    }
+  ],
+  "phase": "ARTIFACT_CREATION_HISTORY",
+  "later_deployment_preflight": "DEPLOYMENT_20260929.md"
+}

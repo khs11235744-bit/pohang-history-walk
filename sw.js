@@ -1,5 +1,6 @@
-const CACHE='pohang-history-walk-v16';
+const CACHE='pohang-history-walk-v17-depth-20260929-live1';
 const CORE=[
+ './guide-a.html','./guide-b.html','./guide-c.html','./assets/depth-guides.css','./assets/depth-guides.js','./data/depth-guides.js','./assets/depth/a-chapter-5-map-2.jpg','./assets/depth/a-chapter-5-map-1.jpg',
  './','./index.html','./student.html','./learning.html','./survey.html','./teacher-evidence.html','./essays.html','./archive.html','./newspaper.html','./culture.html','./film.html','./budget.html','./plans.html','./plan-a.html','./plan-b.html','./plan-c.html','./teams.html','./teacher.html','./bus.html','./recon.html','./improvements.html',
  './assets/styles.css','./assets/app.js','./assets/evidence-analyzer.js','./assets/teacher-ops.js','./assets/recon.js','./assets/harbor.svg','./assets/coast.svg','./assets/lighthouse.svg','./assets/independence.svg','./assets/hyanggyo.svg','./assets/waterworks.svg','./assets/memorial.svg','./assets/museum.svg','./assets/fortress.svg','./assets/exile.svg','./assets/guryongpo-house.svg','./assets/ara.svg','./assets/gyeongju-tomb.svg','./assets/gyeongju-excavation.svg','./assets/gyeongju-gyochon.svg','./assets/gyeongju-museum.svg',
  './data/stops.js','./data/route-notes.js','./data/curriculum-links.js','./data/field-presentations.js','./data/fieldtrip-ops.js','./data/outcomes.js','./data/film.js','./data/budget.js','./data/plans.js','./data/routes.js','./data/route-essays.js','./data/galleries.js','./data/improvements.js','./assets/route-plan.js','./assets/lighthouse.svg','./assets/coast.svg',
@@ -8,7 +9,7 @@ const CORE=[
  './assets/photos/homigot.jpg','./assets/photos/yeongil-museum.jpg','./assets/photos/student-memorial.png','./assets/photos/daereungwon.jpg','./assets/photos/jjoksaem.jpg','./assets/photos/gyochon.jpg','./assets/photos/gyeongju-museum.jpg','./assets/qr/history-trip-survey.png','./assets/qr/history-trip-pre-record.png','./assets/qr/history-trip-post-record.png'
 ];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting()))});
-self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
+self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('pohang-history-walk-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
 self.addEventListener('fetch',e=>{
  if(e.request.method!=='GET')return;
  const u=new URL(e.request.url);
