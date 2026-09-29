@@ -1,5 +1,5 @@
 (()=> {
- const P=window.ROUTE_PLANS[window.PLAN_CODE], E=(window.ROUTE_ESSAYS||{})[window.PLAN_CODE]||{}, G=(window.ROUTE_GALLERIES||{})[window.PLAN_CODE]||[];
+ const P=window.ROUTE_PLANS[window.PLAN_CODE], E=(window.ROUTE_ESSAYS||{})[window.PLAN_CODE]||{}, N=(window.ROUTE_NOTES||{})[window.PLAN_CODE]||{}, G=(window.ROUTE_GALLERIES||{})[window.PLAN_CODE]||[], FO=((window.FIELDTRIP_OPS||{}).food||{})[window.PLAN_CODE]||P.food;
  const OUTDOOR={
   A:['나루끝·북부시장','동빈내항','수도산·덕수공원'],
   B:['호미곶 해맞이광장·해안','수도산·덕수공원'],
@@ -30,16 +30,18 @@
   q('#plan-title').textContent=P.title;
   q('#plan-tag').textContent=P.tag;
   q('#plan-hero').textContent=P.hero;
-  q('#plan-photos').innerHTML=G.map(x=>'<figure><img loading="lazy" src="'+x.src+'" alt="'+x.alt+'"><figcaption>'+x.cap+'</figcaption></figure>').join('');
+  q('#plan-photos').innerHTML=G.map(x=>'<figure><img loading="lazy" src="'+x.src+'" alt="'+x.alt+'"'+(x.fallback?' data-fallback="'+x.fallback+'" onerror="if(this.dataset.fallback){this.onerror=null;this.src=this.dataset.fallback}"':'')+'><figcaption>'+x.cap+'</figcaption></figure>').join('');
   q('#schedule-body').innerHTML=P.schedule.map(r=>'<tr>'+r.map((x,i)=>'<'+(i===0?'th':'td')+'>'+x+'</'+(i===0?'th':'td')+'>').join('')+'</tr>').join('');
   q('#stops').innerHTML=P.stops.map((s,i)=>{
-    const essay=E[s.name], prev=P.stops[i-1], next=P.stops[i+1];
+    const essay=E[s.name], note=N[s.name], prev=P.stops[i-1], next=P.stops[i+1];
     const nav='<div class="field-nav">'+(prev?'<a href="#stop-'+prev.n+'">← '+prev.n+' 이전</a>':'<span></span>')+(next?'<a href="#stop-'+next.n+'">'+next.n+' 다음 →</a>':'<a href="#field-tools">운영모드 ↑</a>')+'</div>';
     const ops='<details class="field-ops"><summary>교사용 현장 체크</summary><div class="field-ops-body"><label class="headcount"><input type="checkbox" data-headcount="'+s.n+'"> 인원점검 완료</label><button type="button" class="button alt locate-btn" data-lat="'+s.lat+'" data-lon="'+s.lon+'">내 위치와 거리 확인</button><span class="geo-status" aria-live="polite"></span></div></details>';
     return '<article class="stop'+(isOutdoor(s)?' is-outdoor':'')+'" id="stop-'+s.n+'"><div class="stop-head"><div class="stop-num">'+s.n+'</div><div><h2>'+s.name+'</h2><div class="address">'+s.addr+'</div><div class="coord">'+s.lat.toFixed(6)+', '+s.lon.toFixed(6)+(s.meta?' · '+s.meta:'')+(s.contact?' · 문의 '+s.contact:'')+'</div><div class="map-links"><a target="_blank" rel="noopener" href="'+maps(s)+'">지도에서 열기</a><a href="#stop-'+s.n+'" title="이 장소 직접 링크">현재 장소 링크</a></div></div></div>'+
-    '<div class="stop-body"><div><h3>가서 볼 것</h3><ol>'+s.see.map(x=>'<li>'+x+'</li>').join('')+'</ol><h3>학생 결과물</h3><p>'+s.output+'</p></div><aside class="mission"><b>발표 주제</b><p>'+s.essay+'</p>'+(essay?'<details><summary>3분 발표문 펼치기</summary>'+essay.map(x=>'<p>'+x+'</p>').join('')+'</details>':'<a href="essays.html">A안 발표문 전체 보기 →</a>')+'</aside></div>'+ops+nav+'</article>';
+    '<div class="stop-body"><div><h3>가서 볼 것</h3><ol>'+s.see.map(x=>'<li>'+x+'</li>').join('')+'</ol><h3>학생 결과물</h3><p>'+s.output+'</p></div><aside class="mission"><b>핵심 탐구 질문</b><p>'+s.essay+'</p>'+(essay?'<details><summary>3분 발표문 참고</summary>'+essay.map(x=>'<p>'+x+'</p>').join('')+'</details>':'')+'</aside></div>'+
+    (note?'<div class="notice route-reading"><span class="kicker">FIELD READING · '+s.n+'</span><h3>'+s.name+' 답사 요록</h3>'+note.paras.map(x=>'<p>'+x+'</p>').join('')+(note.sources&&note.sources.length?'<div class="source-note"><b>확인 자료</b><ul>'+note.sources.map(x=>'<li>'+(x[1]?'<a target="_blank" rel="noopener" href="'+x[1]+'">'+x[0]+'</a>':x[0])+'</li>').join('')+'</ul></div>':'')+'</div>':'')+
+    ops+nav+'</article>';
   }).join('');
-  q('#food').innerHTML=P.food.map((f,i)=>'<article class="archive-card"><span class="kicker">후보 '+(i+1)+'</span><h3>'+f.name+'</h3><p>'+f.addr+'<br><b>'+f.phone+'</b></p><p>'+f.note+'</p></article>').join('');
+  q('#food').innerHTML=FO.map((f,i)=>'<article class="archive-card"><span class="kicker">후보 '+(i+1)+(f.type?' · '+f.type:'')+'</span><h3>'+f.name+'</h3><p>'+f.addr+'<br><b>'+f.phone+'</b></p><p>'+f.note+'</p></article>').join('');
   q('#culture-title').textContent=P.culture.title;
   q('#culture-time').textContent=P.culture.time;
   q('#culture-steps').innerHTML=P.culture.steps.map((x,i)=>'<div class="route-item"><div class="time">'+String(i+1).padStart(2,'0')+'</div><div><h3>'+x+'</h3></div></div>').join('');
