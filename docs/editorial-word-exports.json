@@ -1,0 +1,26 @@
+{
+  "A": {
+    "bytes": 598217,
+    "paragraphs": 315,
+    "tables": 9,
+    "rendered_pages": 35,
+    "sha256": "bd824376164dbce30eb8a208b7576024bedc87c85f9f3bd866076dfa38b4aaf2",
+    "visual_review": "page images reviewed; text and tables not clipped"
+  },
+  "B": {
+    "bytes": 68178,
+    "paragraphs": 275,
+    "tables": 6,
+    "rendered_pages": 29,
+    "sha256": "5bed5edbf6c0aa7e5de55a583726aca2d32b8bddcd8c0249bf2d3c32a6184aef",
+    "visual_review": "page images reviewed; text and tables not clipped"
+  },
+  "C": {
+    "bytes": 68348,
+    "paragraphs": 295,
+    "tables": 4,
+    "rendered_pages": 29,
+    "sha256": "e1d5eff74b40e8c7994ca4541c5882c570cc4e46c14035abca00226147db362f",
+    "visual_review": "page images reviewed; text and tables not clipped"
+  }
+}

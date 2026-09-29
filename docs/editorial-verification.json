@@ -1,0 +1,304 @@
+{
+  "release": "v18-editorial-20260930",
+  "base_commit": "ca61b07e3abb8c63287810ca6f7884a612eb2d70",
+  "audit_items": 100,
+  "text_edit_records": 451,
+  "text_edit_definition": "paragraphs, headings and interface labels; not 451 entire essays",
+  "core_essays": {
+    "A": 9,
+    "B": 8,
+    "C": 9
+  },
+  "static_file_links": 541,
+  "unit_tests": {
+    "passed": 10,
+    "failed": 0
+  },
+  "javascript_syntax_files": 23,
+  "local_browser": {
+    "checks": [
+      {
+        "test": "index.html / 390px",
+        "result": "PASS",
+        "detail": {
+          "viewport": 390,
+          "width": 390,
+          "h1": 152.59375
+        }
+      },
+      {
+        "test": "guide-a.html / 390px",
+        "result": "PASS",
+        "detail": {
+          "viewport": 390,
+          "width": 390,
+          "h1": 131.796875
+        }
+      },
+      {
+        "test": "guide-b.html / 390px",
+        "result": "PASS",
+        "detail": {
+          "viewport": 390,
+          "width": 390,
+          "h1": 131.796875
+        }
+      },
+      {
+        "test": "guide-c.html / 390px",
+        "result": "PASS",
+        "detail": {
+          "viewport": 390,
+          "width": 390,
+          "h1": 131.796875
+        }
+      },
+      {
+        "test": "plan-a.html / 390px",
+        "result": "PASS",
+        "detail": {
+          "viewport": 390,
+          "width": 390,
+          "h1": 138.59375
+        }
+      },
+      {
+        "test": "plan-b.html / 390px",
+        "result": "PASS",
+        "detail": {
+          "viewport": 390,
+          "width": 390,
+          "h1": 138.59375
+        }
+      },
+      {
+        "test": "plan-c.html / 390px",
+        "result": "PASS",
+        "detail": {
+          "viewport": 390,
+          "width": 390,
+          "h1": 138.59375
+        }
+      },
+      {
+        "test": "index.html / 768px",
+        "result": "PASS",
+        "detail": {
+          "viewport": 768,
+          "width": 768,
+          "h1": 222.625
+        }
+      },
+      {
+        "test": "guide-a.html / 768px",
+        "result": "PASS",
+        "detail": {
+          "viewport": 768,
+          "width": 768,
+          "h1": 199.828125
+        }
+      },
+      {
+        "test": "guide-b.html / 768px",
+        "result": "PASS",
+        "detail": {
+          "viewport": 768,
+          "width": 768,
+          "h1": 199.828125
+        }
+      },
+      {
+        "test": "guide-c.html / 768px",
+        "result": "PASS",
+        "detail": {
+          "viewport": 768,
+          "width": 768,
+          "h1": 199.828125
+        }
+      },
+      {
+        "test": "plan-a.html / 768px",
+        "result": "PASS",
+        "detail": {
+          "viewport": 768,
+          "width": 768,
+          "h1": 210.625
+        }
+      },
+      {
+        "test": "plan-b.html / 768px",
+        "result": "PASS",
+        "detail": {
+          "viewport": 768,
+          "width": 768,
+          "h1": 210.625
+        }
+      },
+      {
+        "test": "plan-c.html / 768px",
+        "result": "PASS",
+        "detail": {
+          "viewport": 768,
+          "width": 768,
+          "h1": 210.625
+        }
+      },
+      {
+        "test": "index.html / 1440px",
+        "result": "PASS",
+        "detail": {
+          "viewport": 1440,
+          "width": 1440,
+          "h1": 191.8125
+        }
+      },
+      {
+        "test": "guide-a.html / 1440px",
+        "result": "PASS",
+        "detail": {
+          "viewport": 1440,
+          "width": 1440,
+          "h1": 149.796875
+        }
+      },
+      {
+        "test": "guide-b.html / 1440px",
+        "result": "PASS",
+        "detail": {
+          "viewport": 1440,
+          "width": 1440,
+          "h1": 149.796875
+        }
+      },
+      {
+        "test": "guide-c.html / 1440px",
+        "result": "PASS",
+        "detail": {
+          "viewport": 1440,
+          "width": 1440,
+          "h1": 149.796875
+        }
+      },
+      {
+        "test": "plan-a.html / 1440px",
+        "result": "PASS",
+        "detail": {
+          "viewport": 1440,
+          "width": 1440,
+          "h1": 160.59375
+        }
+      },
+      {
+        "test": "plan-b.html / 1440px",
+        "result": "PASS",
+        "detail": {
+          "viewport": 1440,
+          "width": 1440,
+          "h1": 160.59375
+        }
+      },
+      {
+        "test": "plan-c.html / 1440px",
+        "result": "PASS",
+        "detail": {
+          "viewport": 1440,
+          "width": 1440,
+          "h1": 160.59375
+        }
+      },
+      {
+        "test": "responsive menu / search / font / IDs / rain / telephone",
+        "result": "PASS",
+        "detail": true
+      },
+      {
+        "test": "font persistence and print disclosure restore",
+        "result": "PASS",
+        "detail": true
+      },
+      {
+        "test": "existing headcount storage",
+        "result": "PASS",
+        "detail": true
+      },
+      {
+        "test": "map unavailable retains addresses and readers",
+        "result": "PASS",
+        "detail": true
+      },
+      {
+        "test": "no-JavaScript reader",
+        "result": "PASS",
+        "detail": true
+      },
+      {
+        "test": "offline A/B/C text, CSS, JS, search and missing-asset error",
+        "result": "PASS",
+        "detail": {
+          "cacheEntries": 87,
+          "caches": [
+            "pohang-history-walk-v18-editorial-20260930"
+          ]
+        }
+      },
+      {
+        "test": "online after offline",
+        "result": "PASS",
+        "detail": true
+      }
+    ],
+    "page_errors": []
+  },
+  "service_worker_upgrade": {
+    "previous_cache": [
+      "pohang-history-walk-v17-depth-20260929-live2"
+    ],
+    "upgraded_cache": "v18-editorial",
+    "draft_preserved": true,
+    "automatic_reload": false,
+    "new_reader_after_navigation": true,
+    "offline_after_upgrade": [
+      "A",
+      "B",
+      "C"
+    ],
+    "result": "PASS"
+  },
+  "preserved": {
+    "route_schedule_stops_coordinates_food_other_fields": "unchanged",
+    "legacy_stop_locations_and_sources": "unchanged",
+    "images_qr_unchanged": 38,
+    "budget_forms_evidence_code": "unchanged",
+    "javascript_syntax_files": 23,
+    "docx_zip_xml": "valid"
+  },
+  "word_exports": {
+    "A": {
+      "bytes": 598217,
+      "paragraphs": 315,
+      "tables": 9,
+      "rendered_pages": 35,
+      "sha256": "bd824376164dbce30eb8a208b7576024bedc87c85f9f3bd866076dfa38b4aaf2",
+      "visual_review": "page images reviewed; text and tables not clipped"
+    },
+    "B": {
+      "bytes": 68178,
+      "paragraphs": 275,
+      "tables": 6,
+      "rendered_pages": 29,
+      "sha256": "5bed5edbf6c0aa7e5de55a583726aca2d32b8bddcd8c0249bf2d3c32a6184aef",
+      "visual_review": "page images reviewed; text and tables not clipped"
+    },
+    "C": {
+      "bytes": 68348,
+      "paragraphs": 295,
+      "tables": 4,
+      "rendered_pages": 29,
+      "sha256": "e1d5eff74b40e8c7994ca4541c5882c570cc4e46c14035abca00226147db362f",
+      "visual_review": "page images reviewed; text and tables not clipped"
+    }
+  },
+  "total_reviewed_word_pages": 93,
+  "reservations_or_external_forms_modified": false,
+  "scope": "Content editing and reader interface. No new historical claims beyond cited source set. Deployment is checked separately after commit."
+}
