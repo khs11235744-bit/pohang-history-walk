@@ -4,7 +4,7 @@ const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/st
  const current=source.match(/const CACHE='([^']+)'/)[1],handlers={},deleted=[];
  const keys=[current,'pohang-history-walk-v16','other-project-v1'];
  let installCount=0;
- const sandbox={self:{addEventListener:(n,cb)=>handlers[n]=cb,clients:{claim:async()=>{}},skipWaiting:async()=>{}},caches:{keys:async()=>keys,delete:async k=>{deleted.push(k);return true},open:async()=>({addAll:async requests=>{assert.equal(new Set(requests).size,requests.length,'Offline installation must not submit duplicate cache keys');installCount=requests.length;}})}};
+ const sandbox={URL, self:{registration:{scope:"https://example.test/pohang-history-walk/"},addEventListener:(n,cb)=>handlers[n]=cb,clients:{claim:async()=>{}},skipWaiting:async()=>{}},caches:{keys:async()=>keys,delete:async k=>{deleted.push(k);return true},open:async()=>({addAll:async requests=>{assert.equal(new Set(requests).size,requests.length,'Offline installation must not submit duplicate cache keys');installCount=requests.length;}})}};
  vm.runInNewContext(source,sandbox);let completion;
  handlers.activate({waitUntil:p=>completion=p});await completion;
  assert.deepEqual(deleted,['pohang-history-walk-v16'],'Activation must leave unrelated project caches intact');

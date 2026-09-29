@@ -1,0 +1,59 @@
+{
+  "checked_at": "2026-09-30",
+  "method": "OSRM public route API driving/car, existing representative coordinates, no live traffic, no coach dimensions. School/lunch/detours excluded from A comparison.",
+  "a_old": {
+    "order": [
+      "영일민속박물관",
+      "나루끝·북부시장",
+      "동빈내항",
+      "동빈문화창고1969",
+      "수도산·덕수공원",
+      "학도의용군전승기념관"
+    ],
+    "distance_m": 13437.1,
+    "duration_s": 1178.6,
+    "query": "https://router.project-osrm.org/route/v1/driving/129.3471399,36.110646;129.3641082,36.0471273;129.3709783,36.044488;129.3703346,36.0491189;129.3643484,36.0459923;129.3567047,36.0360814?overview=false"
+  },
+  "a_new": {
+    "order": [
+      "영일민속박물관",
+      "동빈문화창고1969",
+      "동빈내항",
+      "나루끝·북부시장",
+      "수도산·덕수공원",
+      "학도의용군전승기념관"
+    ],
+    "distance_m": 12979.7,
+    "duration_s": 1117.3,
+    "legs_m": [
+      8723.3,
+      638.2,
+      1336.1,
+      126.6,
+      2155.5
+    ],
+    "query": "https://router.project-osrm.org/route/v1/driving/129.3471399,36.110646;129.3703346,36.0491189;129.3709783,36.044488;129.3641082,36.0471273;129.3643484,36.0459923;129.3567047,36.0360814?overview=false"
+  },
+  "b_homigot_heunghae": {
+    "distance_m": 40429.4,
+    "duration_s": 2690.4,
+    "scheduled_minutes": 75,
+    "query": "https://router.project-osrm.org/route/v1/driving/129.566029,36.0760228;129.3471399,36.110646?overview=false"
+  },
+  "limitations": [
+    "대표 핀과 도로에 스냅된 위치는 출입구·승하차 지점이 아니다.",
+    "보행로·경사·40명 인솔·신호대기 실측 없음",
+    "대형버스 회차·폭·높이 제한 및 예약 확인 없음"
+  ],
+  "source_urls": [
+    "https://pohang.go.kr/phtour/wmap/tourInformation/view.do?tour_info_idx=510",
+    "https://katon.or.kr/article/press_doc/detail/1706",
+    "https://www.lighthouse-museum.or.kr/kor/index.do",
+    "https://www.mof.go.kr/doc/ko/selectDoc.do?bbsSeq=10&docSeq=54369&menuSeq=971",
+    "https://www.yna.co.kr/view/AKR20171221066000805",
+    "https://data.visitkorea.or.kr/linkedview/2603493",
+    "https://encykorea.aks.ac.kr/Article/E0060213",
+    "https://v.daum.net/v/20260614064703489",
+    "https://v.daum.net/v/20260618170044166"
+  ]
+}

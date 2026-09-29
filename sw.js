@@ -1,6 +1,7 @@
 /* Cache only this project. Navigation prefers the network; readers have offline copies. */
-const CACHE='pohang-history-walk-v18-editorial-20260930';
+const CACHE='pohang-history-walk-v19-place-history-20260930';
 const CORE=[
+ './route-review.html',
  './assets/register-sw.js','./assets/editorial.css','./assets/editorial.js','./editorial-review.html',
  './guide-a.html','./guide-b.html','./guide-c.html','./assets/depth-guides.css','./assets/depth-guides.js','./data/depth-guides.js','./assets/depth/a-chapter-5-map-2.jpg','./assets/depth/a-chapter-5-map-1.jpg',
  './','./index.html','./student.html','./learning.html','./survey.html','./teacher-evidence.html','./essays.html','./archive.html','./newspaper.html','./culture.html','./film.html','./budget.html','./plans.html','./plan-a.html','./plan-b.html','./plan-c.html','./teams.html','./teacher.html','./bus.html','./recon.html','./improvements.html',

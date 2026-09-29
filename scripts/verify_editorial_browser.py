@@ -35,7 +35,7 @@ try:
      assert metrics['h1']<350,(file,metrics)
      count=page.locator('.guide-chapter').count();page.locator('#reader-search').fill('자료');page.wait_for_timeout(240)
      assert page.locator('#reader-search-results li').count()>0
-     page.locator('#reader-search').fill('<img src=x onerror=alert(1)>');page.wait_for_timeout(240)
+     page.locator('#reader-search').fill('<img src=x onerror=alert(1)>');page.wait_for_function("document.querySelector('#reader-search-status').textContent.startsWith('찾는 말이 없습니다')",timeout=5000)
      assert page.locator('#reader-search-results img').count()==0 and page.locator('#reader-search-results li').count()==0
      assert page.locator('.guide-chapter').count()==count
      page.locator('#reader-search').fill('')
@@ -68,8 +68,8 @@ try:
   nojs=browser.new_context(java_script_enabled=False);npage=nojs.new_page();npage.goto(BASE+'guide-c.html',wait_until='domcontentloaded');assert npage.locator('.guide-chapter').count()==15 and npage.locator('#primary-nav').is_visible();record('no-JavaScript reader');nojs.close()
   # Wait for installed, claimed cache and verify actual members before disconnecting.
   page.goto(BASE+'index.html',wait_until='domcontentloaded');page.wait_for_function('!!navigator.serviceWorker.controller',timeout=60000)
-  keys=page.evaluate('async()=>{await navigator.serviceWorker.ready;return caches.keys()}');assert any('v18-editorial' in k for k in keys),keys
-  cache=page.evaluate("async()=>{const c=await caches.open('pohang-history-walk-v18-editorial-20260930');return (await c.keys()).map(x=>new URL(x.url).pathname)}")
+  keys=page.evaluate('async()=>{await navigator.serviceWorker.ready;return caches.keys()}');assert any('v19-place-history' in k for k in keys),keys
+  cache=page.evaluate("async()=>{const c=await caches.open('pohang-history-walk-v19-place-history-20260930');return (await c.keys()).map(x=>new URL(x.url).pathname)}")
   for file in ['guide-a.html','guide-b.html','guide-c.html','assets/editorial.css','assets/editorial.js','assets/register-sw.js']:assert any(x.endswith('/'+file) for x in cache),file
   context.set_offline(True)
   for c,n in [('a',16),('b',14),('c',15)]:
