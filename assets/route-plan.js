@@ -2,7 +2,7 @@
  const P=window.ROUTE_PLANS[window.PLAN_CODE], E=(window.ROUTE_ESSAYS||{})[window.PLAN_CODE]||{}, N=(window.ROUTE_NOTES||{})[window.PLAN_CODE]||{}, C=(window.ROUTE_CURRICULUM||{})[window.PLAN_CODE]||{}, PR=(window.ROUTE_PRESENTATIONS||{})[window.PLAN_CODE]||{}, G=(window.ROUTE_GALLERIES||{})[window.PLAN_CODE]||[], FO=((window.FIELDTRIP_OPS||{}).food||{})[window.PLAN_CODE]||P.food;
  const OUTDOOR={
   A:['나루끝·북부시장','동빈내항','수도산·덕수공원'],
-  B:['호미곶 해맞이광장·해안','수도산·덕수공원'],
+  B:['호미곶 연오랑·세오녀상·등대','호미곶 해안 관찰·플로깅','수도산·덕수공원'],
   C:['대릉원·천마총','경주교촌마을·최부자댁']
  };
  let planMap=null;
@@ -27,8 +27,8 @@
   </div></section>`);
  }
  function render(){
-  document.title=P.code+'안 '+' · '+P.title+' | 포항고 인문학 역사기행';
-  if(q('#plan-code'))q('#plan-code').textContent=P.code+'안';
+  document.title=(P.singleCourse?'2026 제2회 인문학 기행':P.code+'안')+' · '+P.title+' | 포항고 인문학 기행';
+  if(q('#plan-code'))q('#plan-code').textContent=P.singleCourse?'2026 제2회':P.code+'안';
   q('#plan-title').textContent=P.title;
   q('#plan-tag').textContent=P.tag;
   q('#plan-hero').textContent=P.hero;
@@ -40,7 +40,7 @@
     const nav='<div class="field-nav">'+(prev?'<a href="#stop-'+prev.n+'">← '+(prev.displayOrder||prev.n)+' 이전</a>':'<span></span>')+(next?'<a href="#stop-'+next.n+'">'+(next.displayOrder||next.n)+' 다음 →</a>':'<a href="#field-tools">운영모드 ↑</a>')+'</div>';
     const ops='<details class="field-ops"><summary>교사용 현장 체크</summary><div class="field-ops-body"><label class="headcount"><input type="checkbox" data-headcount="'+s.n+'"> 인원점검 완료</label><button type="button" class="button alt locate-btn" data-lat="'+s.lat+'" data-lon="'+s.lon+'">내 위치와 거리 확인</button><span class="geo-status" aria-live="polite"></span></div></details>';
     return '<article class="stop'+(isOutdoor(s)?' is-outdoor':'')+'" id="stop-'+s.n+'"><div class="stop-head"><div class="stop-num">'+displayOrder+'</div><div><h2>'+s.name+'</h2><div class="address">'+s.addr+'</div><div class="coord">'+(s.meta||'출입구와 승하차 위치는 별도 확인')+(s.contact?' · 문의 '+phoneLink(s.contact):'')+'</div><div class="map-links"><a target="_blank" rel="noopener" href="'+maps(s)+'">지도에서 열기</a><a href="#stop-'+s.n+'" title="이 장소 직접 링크">이 장소 바로가기</a></div></div></div>'+
-    (s.visitReason?'<p class="visit-reason">'+s.visitReason+'</p>':'')+'<div class="stop-body"><div><h3>관찰할 것</h3><ol>'+s.see.map(x=>'<li>'+x+'</li>').join('')+'</ol><h3>남길 기록</h3><p>'+s.output+'</p></div><aside class="mission"><b>탐구 질문</b><p>'+s.essay+'</p>'+(!presentation&&essay?'<details><summary>3분 발표 자료</summary>'+essay.map(x=>'<p>'+x+'</p>').join('')+'</details>':'')+'</aside></div>'+
+    (s.visitReason?'<p class="visit-reason">'+s.visitReason+'</p>':'')+(s.guideRef?'<p><a href="'+s.guideRef+'">이 장소의 요록 읽기 →</a></p>':'')+'<div class="stop-body"><div><h3>관찰할 것</h3><ol>'+s.see.map(x=>'<li>'+x+'</li>').join('')+'</ol><h3>남길 기록</h3><p>'+s.output+'</p></div><aside class="mission"><b>탐구 질문</b><p>'+s.essay+'</p>'+(!presentation&&essay?'<details><summary>3분 발표 자료</summary>'+essay.map(x=>'<p>'+x+'</p>').join('')+'</details>':'')+'</aside></div>'+
     (presentation?'<details class="student-presentation"><summary>3분 발표 자료</summary><div>'+presentation.map(x=>'<p>'+x+'</p>').join('')+'</div></details>':'')+
     ((note||curriculum)?'<div class="notice route-reading"><h3>요록</h3>'+(note?note.paras.map(x=>'<p>'+x+'</p>').join(''):'')+(curriculum?'<p><b>교과연계</b> '+curriculum.subjects.join(' · ')+'</p><p><b>핵심 개념</b> '+curriculum.concepts.join(' · ')+'</p>'+curriculum.overview.map(x=>'<p>'+x+'</p>').join(''):'')+(note&&note.sources&&note.sources.length?'<div class="source-note"><b>확인 자료</b><ul>'+note.sources.map(x=>'<li>'+(x[1]?'<a target="_blank" rel="noopener" href="'+x[1]+'">'+x[0]+'</a>':x[0])+'</li>').join('')+'</ul></div>':'')+'</div>':'')+
     (curriculum?'<details class="curriculum-reading"><summary>학습지 · 답사 전후 활동</summary><div><div class="archive-grid"><article class="archive-card"><h3>답사 전</h3><ul>'+curriculum.before.map(x=>'<li>'+x+'</li>').join('')+'</ul></article><article class="archive-card"><h3>현장</h3><ul>'+curriculum.field.map(x=>'<li>'+x+'</li>').join('')+'</ul></article><article class="archive-card"><h3>답사 후</h3><ul>'+curriculum.after.map(x=>'<li>'+x+'</li>').join('')+'</ul></article></div><div class="source-note"><b>수행평가·발표 질문</b><ol>'+curriculum.assessment.map(x=>'<li>'+x+'</li>').join('')+'</ol></div></div></details>':'')+
@@ -57,7 +57,7 @@
   if(P.transportNote){
    const host=q('#schedule-body').closest('table').parentElement;
    const box=document.createElement('div');box.className='route-logistics';
-   box.innerHTML='<p class="route-method">'+P.transportNote+'</p><details><summary>승하차·보행과 주변 대체지</summary><div class="logistics-inner"><h3>구간별 운영</h3>'+P.logistics.map(x=>'<p><b>'+x[0]+'</b> '+x[1]+'</p>').join('')+'<h3>다 넣지 않고 골라 바꾸기</h3>'+P.alternatives.map(x=>'<article><h4>'+x[0]+'</h4><p>'+x[1]+'</p><p>'+x[2]+'</p><a href="'+x[3]+'">자료·요록</a></article>').join('')+'<p><a href="route-review.html">동선 검토 전체 보기</a></p></div></details>';
+   box.innerHTML='<p class="route-method">'+P.transportNote+'</p><details><summary>승하차·보행과 주변 대체지</summary><div class="logistics-inner"><h3>구간별 운영</h3>'+P.logistics.map(x=>'<p><b>'+x[0]+'</b> '+x[1]+'</p>').join('')+(P.alternatives.length?'<h3>주변 대체지</h3>':'')+P.alternatives.map(x=>'<article><h4>'+x[0]+'</h4><p>'+x[1]+'</p><p>'+x[2]+'</p><a href="'+x[3]+'">자료·요록</a></article>').join('')+'<p><a href="bus.html">버스·승하차 확인</a></p></div></details>';
    host.append(box);
   }
   const mapNode=q('#plan-map');if(mapNode){const caption=document.createElement('p');caption.className='route-method';caption.textContent='지도 점은 장소의 대표 위치입니다. 연결선은 방문 순서이며 실제 주행·보행 경로가 아닙니다. 버스 승하차 지점과 출입구는 별도 확인합니다.';mapNode.after(caption);}

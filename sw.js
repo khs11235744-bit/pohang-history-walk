@@ -1,6 +1,10 @@
 /* Cache only this project. Navigation prefers the network; readers have offline copies. */
-const CACHE='pohang-history-walk-v20-student-reading-20260930';
+const CACHE='pohang-history-walk-v22-second-trip-20261006';
 const CORE=[
+  'assets/photos/sudosan-deoksu-park.jpg',
+  'assets/photos/sudosan-mogaljeong.jpg',
+  'assets/photos/sudosan-waterworks.jpg',
+ './guide.html','./register.html','./parent-notice.html','./assets/trip-2026.css','./assets/trip-journal.js','./assets/teams-2026.js','./data/current-course.js','./assets/qr/application-2026.svg','./assets/qr/application-2026.png',
  './teacher-reading-notes.html','./assets/student-reading.css',
  './route-review.html',
  './assets/register-sw.js','./assets/editorial.css','./assets/editorial.js','./editorial-review.html',

@@ -34,12 +34,14 @@ class FieldHistory(unittest.TestCase):
    self.assertEqual([a.get_text(' ',strip=True) for a in s.select('.guide-toc a')],[c['title'] for c in d[code]['chapters']])
  def test_review_does_not_claim_actual_coach_travel(self):
   text=BeautifulSoup((ROOT/'route-review.html').read_text(encoding='utf-8'),'html.parser').get_text(' ',strip=True)
-  for needed in ['현장 실측','OSRM','승하차','대체','제남헌','국립등대박물관','흥해향교','구룡포']:self.assertIn(needed,text)
+  for needed in ['실측 전 배정시간','승하차','호미곶','학도의용군','수도산']:self.assertIn(needed,text)
  def test_map_distinguishes_pin_order_from_roads(self):
   text=(ROOT/'assets/route-plan.js').read_text(encoding='utf-8');self.assertIn('실제 주행',text);self.assertIn('displayOrder',text)
  def test_leg_buffers_are_explicit(self):
   for code in 'AB':
-   p=data('routes.js')[code];self.assertTrue(p['transportNote']);self.assertTrue(p['logistics']);self.assertTrue(p['alternatives'])
+   p=data('routes.js')[code];self.assertTrue(p['transportNote']);self.assertTrue(p['logistics'])
+   if p.get('singleCourse'):self.assertEqual(p['alternatives'],[])
+   else:self.assertTrue(p['alternatives'])
  def test_lighthouse_date_has_named_source(self):
   b=data('depth-guides.js')['B'];text=str(b)
   for expected in ['1908','1706','263','450']:self.assertIn(expected,text)

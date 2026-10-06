@@ -184,7 +184,7 @@ window.FIELDTRIP={
       "lat": 36.0459922741,
       "lon": 129.3643484013,
       "verify": "한국관광공사 연계 좌표 확인",
-      "image": "assets/waterworks.svg",
+      "image": "assets/photos/sudosan-waterworks.jpg",
       "teaser": "포항의 시가지가 커지면서 물을 구하는 일이 중요한 현안이 되었다.",
       "mission": "왜 배수시설을 높은 곳에 두었는지 지형으로 설명하고, ‘근대화’라는 말에 조건 하나를 붙인다.",
       "essayTitle": "수도산 배수지 — 포항 시가지에 물을 보내다",
