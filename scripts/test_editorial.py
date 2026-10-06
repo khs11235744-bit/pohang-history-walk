@@ -51,7 +51,7 @@ class EditorialAcceptance(unittest.TestCase):
   sw=(ROOT/'sw.js').read_text()
   self.assertIn("request.mode === 'navigate'",sw)
   self.assertNotIn("catch(()=>caches.match('./student.html'))",sw)
-  self.assertIn('pohang-history-walk-v20',sw)
+  self.assertRegex(sw,r"const CACHE='pohang-history-walk-v\d+-[^']+'")
  def test_reading_panels_have_native_disclosure(self):
   js=(ROOT/'assets/depth-guides.js').read_text()
   self.assertIn("el('details'",js)
