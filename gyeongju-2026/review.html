@@ -1,33 +1,18 @@
 <!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex, nofollow"><title>제출 현황 | 경주 인문학 기행</title>
+<meta name="robots" content="noindex, nofollow"><title>교사용 안내 | 경주 인문학 기행</title>
 <link rel="stylesheet" href="studio.css">
-<style>
-[hidden]{display:none!important} form{margin-top:16px}.review-list{padding-left:1.2rem}.review-list li{margin:8px 0}
-.report-data dt{font-weight:800;margin-top:16px}.report-data dd{margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
-.review-photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:16px 0}
-.review-photos img{display:block;width:100%;height:auto}
-</style>
-</head><body><header class="studio-head"><nav class="studio-nav" aria-label="사이트 내비게이션"><a class="logo" href="index.html">포항고등학교 경주 인문학 기행</a><div class="links"><a href="teacher.html">교사용 지도 자료</a><a href="report.html">학생 보고서</a></div></nav></header>
-<main class="mainsection"><div class="frame">
-<h1>탐구 보고서 제출 현황</h1>
-<p id="availability" role="status">교사용 접수 시스템 연결을 준비 중입니다.</p>
-<form id="login" hidden>
-<div class="field"><label for="teacherCode">지도교사 코드</label><input id="teacherCode" type="password" autocomplete="off" required pattern="[a-zA-Z0-9_\-]{24,90}"></div>
-<button class="btn" type="submit">제출 현황 열기</button>
-</form>
-<p id="reviewStatus" role="status"></p>
-<section id="dashboard" hidden aria-labelledby="dashboardTitle">
-<h2 id="dashboardTitle">접수 목록</h2><p id="summary"></p>
-<div class="toolbar"><button type="button" class="btn alt" id="refresh">새로고침</button><button type="button" class="btn alt" id="logout">닫기</button></div>
-<ul class="review-list" id="submissions"></ul>
-</section>
-<section id="reportDetail" hidden aria-labelledby="detailTitle">
-<h2 id="detailTitle">보고서 확인</h2>
-<dl class="report-data" id="reportData"></dl><div class="review-photos" id="reviewPhotos"></div>
-<form id="reviewForm"><div class="field"><label for="decision">처리 상태</label><select id="decision"><option value="reviewed">확인 완료</option><option value="revision">보완 요청</option></select></div>
-<div class="field"><label for="reviewNote">학생에게 전달할 의견</label><textarea id="reviewNote" maxlength="1000"></textarea></div>
-<button type="submit" class="btn">저장</button></form>
-<p id="detailStatus" role="status"></p>
-</section>
-</div></main><script type="module" src="review.js"></script></body></html>
+<style>.shortcut{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.shortcut a{display:block;text-decoration:none;border:1px solid #d6ded5;background:#fff;border-radius:10px;padding:23px}.shortcut strong{display:block;font-size:19px;margin-bottom:6px}.shortcut small{display:block;color:#617068;font-size:13px}.notice{background:#eef2e9;border-left:3px solid #78927b;padding:16px 19px;margin-top:25px;font-size:14px}@media(max-width:640px){.shortcut{grid-template-columns:1fr}}</style>
+</head><body><header class="studio-head"><nav class="studio-nav" aria-label="사이트 내비게이션"><a class="logo" href="index.html">포항고등학교 경주 인문학 기행<small>교과 연계 탐구 프로젝트</small></a><div class="links"><a href="index.html">기행 안내</a><a href="guide.html">장소별 요록</a><a href="learning.html">활동지</a><a href="teacher.html" aria-current="page">교사용 자료</a></div></nav></header>
+<main><section class="doc-hero"><div class="frame"><div class="eyebrow">교사용 · 별도 로그인 없이 이용</div><h1>경주 탐구 교사용 자료실</h1><p>강명지·박기학·권형석 지도교사가 함께 사용할 안내서, 학습목표, 보고서 양식과 평가 자료입니다. 자료를 열기 위해 별도의 교사 코드나 비밀번호를 입력할 필요는 없습니다.</p></div></section>
+<section class="mainsection"><div class="frame"><div class="sectionhead"><div><h2>바로 이용하기</h2><p>필요한 자료를 선택하면 바로 열립니다.</p></div></div>
+<div class="shortcut">
+<a href="teacher.html"><strong>수업 지도안·평가 자료</strong><small>역사·사회·윤리 학습목표, 답사 진행안, 평가 예시</small></a>
+<a href="guide.html"><strong>장소별 요록</strong><small>경주 답사 장소 설명, 질문, 교사용 현장 해설</small></a>
+<a href="learning.html"><strong>학생 탐구 활동지</strong><small>현장 기록, 관찰 과제, 교과별 질문</small></a>
+<a href="report.html"><strong>학생 보고서 양식</strong><small>탐구 보고서 작성 및 파일 출력</small></a>
+</div>
+<div class="notice">이 자료실은 로그인 없이 바로 열립니다. 학생의 실명·학번·개별 제출 보고서는 공개하지 않습니다. 개인정보가 포함된 실제 설문 응답은 <a href="https://khs-all-survey-independent.khs11235744.workers.dev/" rel="noopener noreferrer">기존 「모두의 설문」 관리 화면</a>의 인증된 세션에서 확인합니다. 별도의 경주 교사 로그인 화면은 만들지 않았습니다.</div>
+</div></section></main>
+<footer class="studio-foot"><div class="frame"><strong>포항고등학교 · 2026 경주 교과 연계 탐구</strong><p>지도교사 강명지 · 박기학 · 권형석</p></div></footer>
+</body></html>
