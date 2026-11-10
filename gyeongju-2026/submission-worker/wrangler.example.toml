@@ -1,0 +1,11 @@
+name = "pohang-gyeongju-2026-submissions"
+main = "worker.mjs"
+compatibility_date = "2026-04-01"
+
+[vars]
+ALLOWED_ORIGIN = "https://khs11235744-bit.github.io"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "pohang-gyeongju-2026-submissions"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
