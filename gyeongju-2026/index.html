@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="포항고등학교 2026학년도 교과 연계 탐구 프로젝트 - 경주 역사·사회·윤리 융합 인문학 기행">
+<title>경주 인문학 기행 | 2026 교과 연계 탐구 프로젝트 | 포항고등학교</title>
+<style>
+:root{--ink:#1d2826;--muted:#61706b;--paper:#fbfaf5;--cream:#f3efe5;--gold:#b28548;--green:#234d45;--line:#dcded4;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font-family:system-ui,-apple-system,'Malgun Gothic','Apple SD Gothic Neo',sans-serif;line-height:1.68;word-break:keep-all}
+a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}button{cursor:pointer}
+.wrap{width:min(1100px,calc(100% - 38px));margin:auto}
+header{position:sticky;top:0;z-index:20;background:#fbfaf5ed;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.header{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:72px}
+.brand{font-weight:800;line-height:1.24;letter-spacing:-.04em}.brand small{display:block;font-size:12px;font-weight:500;color:var(--muted)}
+nav{display:flex;gap:22px;font-size:14px;font-weight:700}nav a:hover{color:var(--green);text-decoration:underline}
+.hero{background:linear-gradient(115deg,#1e3934,#315b4e 64%,#5b6c4d);color:white;overflow:hidden;position:relative}
+.hero:after{content:"慶州";position:absolute;right:-20px;bottom:-105px;font-size:clamp(170px,28vw,330px);font-family:serif;opacity:.10;pointer-events:none}
+.hero-inner{position:relative;z-index:1;padding:86px 0 78px;max-width:900px}
+.kicker{font-weight:750;letter-spacing:.09em;font-size:13px;color:#d9c193}.hero h1{font-size:clamp(36px,5.8vw,69px);line-height:1.22;letter-spacing:-.058em;margin:16px 0 18px}
+.hero p{font-size:clamp(15px,1.9vw,19px);max-width:750px;color:#e5ebe5}
+.pills{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0 30px}.pills span{border:1px solid #acc6b78f;border-radius:99px;padding:7px 14px;font-size:13px;background:#ffffff12}
+.action{display:inline-flex;gap:10px;align-items:center;background:#f2eee2;color:#1d3530;padding:13px 21px;border-radius:8px;font-weight:800;border:0}.action.alt{background:transparent;border:1px solid #bed2c7;color:white}
+section{padding:68px 0}.eyebrow{font-size:12px;letter-spacing:.16em;color:#7b6d4c;font-weight:800;text-transform:uppercase}
+h2{font-size:clamp(26px,3vw,38px);line-height:1.28;letter-spacing:-.045em;margin:6px 0 14px}
+.lede{color:var(--muted);max-width:790px;margin:0 0 25px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;transform:translateY(-24px)}
+.stat{background:white;box-shadow:0 8px 26px #182d2610;border:1px solid var(--line);border-radius:14px;padding:21px 24px}
+.stat strong{display:block;font-size:23px;color:var(--green)}.stat span{font-size:13px;color:var(--muted)}
+.route{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.place{background:white;border:1px solid var(--line);border-radius:14px;padding:25px 25px 24px;position:relative;min-height:175px}
+.place .num{position:absolute;right:20px;top:15px;font-family:Georgia,serif;font-size:40px;color:#e5e9df;font-weight:800}
+.place h3{font-size:20px;margin:6px 0}.place p{margin:0;color:#55615d;font-size:15px}
+.subject{font-size:12px;display:inline-flex;background:#e9eee8;color:var(--green);font-weight:800;padding:4px 9px;border-radius:4px}
+.schedule{border:1px solid var(--line);border-radius:13px;overflow:hidden;background:white}
+.time-row{display:grid;grid-template-columns:170px 1fr;gap:20px;padding:21px 24px;border-bottom:1px solid var(--line)}
+.time-row:last-child{border-bottom:0}.time-row b{color:var(--green)}.time-row p{margin:3px 0 0;color:var(--muted);font-size:14px}
+.note{background:#f4efe2;border-left:3px solid var(--gold);padding:16px 19px;border-radius:0 8px 8px 0;font-size:14px;color:#555245;margin-top:22px}
+.block-cream{background:var(--cream)}
+.tasks{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.task{padding:23px;background:white;border-radius:12px;border:1px solid var(--line)}.task h3{margin:4px 0 6px;font-size:18px}.task p{font-size:14px;color:var(--muted);margin:0}
+.report{border-radius:15px;background:white;border:1px solid var(--line);padding:26px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:18px}.field{display:flex;flex-direction:column;gap:5px;margin:12px 0}
+.field label{font-size:13px;font-weight:800}.field input,.field textarea,.field select{padding:11px 12px;border:1px solid #bfc9c3;background:#fff;border-radius:7px;width:100%;color:#1d2826}
+.field textarea{min-height:105px;resize:vertical}.form-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:17px}
+.btn{border:0;padding:11px 17px;background:var(--green);color:white;font-weight:800;border-radius:7px}.btn.secondary{color:var(--green);background:#e7eee9}
+.local-notice{font-size:13px;color:#6a7068;margin:15px 0 0}.status{min-height:20px;font-size:13px;color:var(--green)}
+footer{background:#162e29;color:#dfebe4;padding:35px 0;font-size:13px}
+footer p{margin:4px 0}footer .small{color:#bacdc2}
+@media(max-width:720px){.header{align-items:flex-start;padding:14px 0;flex-direction:column}nav{flex-wrap:wrap;gap:9px 16px}.hero-inner{padding:57px 0 65px}.stats{grid-template-columns:1fr;transform:translateY(-12px)}.route,.tasks,.fields{grid-template-columns:1fr}.time-row{grid-template-columns:1fr;gap:4px;padding:16px 20px}section{padding:45px 0}.report{padding:18px}}
+@media print{header,.hero,.stats,.print-hide,footer,#route,#schedule,#goals{display:none!important}body{background:white}section{padding:0}.block-cream{background:white}#report{display:block!important}.report{border:0;padding:0}.field textarea{border:1px solid #aaa;min-height:100px}.field input{border:1px solid #aaa}.wrap{width:100%}.note{display:none}h2{font-size:24px}}
+</style>
+</head>
+<body>
+<header><div class="wrap header"><a class="brand" href="#top">포항고등학교 인문학 기행<small>2026 교과 연계 탐구 프로젝트 · 경주</small></a><nav aria-label="주 메뉴"><a href="#route">답사 장소</a><a href="#schedule">운영 계획</a><a href="#goals">탐구 활동</a><a href="#report">탐구 보고서</a></nav></div></header>
+<main id="top">
+<div class="hero"><div class="wrap hero-inner">
+<div class="kicker">POHANG HIGH SCHOOL · GYEONGJU FIELD STUDY</div>
+<h1>역사의 발자취를 따라,<br>사회의 가치를 찾아,<br>미래의 윤리를 향해</h1>
+<p>경주의 역사문화유산을 현장에서 살펴보며 역사·사회·윤리의 질문을 연결합니다. 문화유산을 읽고 공동체의 가치를 고민하는 이틀간의 융합 탐구입니다.</p>
+<div class="pills"><span>2026. 12. 16.(수) ~ 17.(목)</span><span>1·2학년 무학년제</span><span>참여 학생 30명</span><span>지도교사 강명지 · 박기학 · 권형석</span></div>
+<a class="action" href="#route">답사 내용 살펴보기 ↓</a> <a class="action alt" href="#report">탐구 보고서 작성</a>
+</div></div>
+<div class="wrap stats" aria-label="운영 요약"><div class="stat"><strong>12월 16일</strong><span>경주 역사문화유산 현장답사</span></div><div class="stat"><strong>12월 17일</strong><span>1-8·1-9반 / 탐구 보고서 작성</span></div><div class="stat"><strong>역사 × 사회 × 윤리</strong><span>교과 융합 탐구·결과 공유</span></div></div>
+<section id="route"><div class="wrap"><div class="eyebrow">FIELDWORK</div><h2>경주에서 읽는 여섯 가지 질문</h2>
+<p class="lede">아래 장소는 운영 계획에 포함된 주요 답사 지점입니다. 실제 방문 순서와 세부 일정은 기상 상황, 교통 여건 및 현지 사정에 따라 일부 조정될 수 있습니다.</p>
+<div class="route">
+<article class="place"><span class="subject">역사 · 문화</span><span class="num">01</span><h3>국립경주박물관</h3><p>유물과 전시 자료를 바탕으로 신라의 정치·사회·문화적 특징을 해석합니다. 유물의 설명과 실제 사료를 구분해 기록해 봅니다.</p></article>
+<article class="place"><span class="subject">사회 · 윤리</span><span class="num">02</span><h3>교촌마을 · 최부자댁</h3><p>경주 최부자 가문의 나눔과 사회적 책임을 살펴보고 오늘날 지역공동체가 실천할 수 있는 연대의 가치를 토론합니다.</p></article>
+<article class="place"><span class="subject">역사 · 윤리</span><span class="num">03</span><h3>월정교</h3><p>역사 공간의 복원과 활용을 살펴보며 문화유산을 보존할 때 무엇을 우선해야 하는지 생각합니다.</p></article>
+<article class="place"><span class="subject">역사 · 과학문화</span><span class="num">04</span><h3>첨성대</h3><p>신라의 천문 관측과 과학문화에 관한 역사적 해석을 살펴보고, 확인 가능한 사실과 후대의 해석을 구분합니다.</p></article>
+<article class="place"><span class="subject">역사 · 사회</span><span class="num">05</span><h3>대릉원</h3><p>신라의 고분과 왕경 공간을 관찰하며 권력과 사회 구조, 오늘날의 문화유산 보호 문제를 연결합니다.</p></article>
+<article class="place"><span class="subject">사회 · 지역탐구</span><span class="num">06</span><h3>황리단길</h3><p>역사도시의 관광 개발이 지역 상권, 주민 생활, 문화유산 보존에 주는 영향을 여러 입장에서 검토합니다.</p></article>
+</div>
+<div class="note">※ 방문 장소와 활동 순서는 운영 여건에 따라 일부 변경될 수 있습니다. 현장에서는 지도교사의 안전 안내와 집결 지침을 따릅니다.</div>
+</div></section>
+<section id="schedule" class="block-cream"><div class="wrap"><div class="eyebrow">PROGRAM</div><h2>이틀간의 운영 계획</h2><p class="lede">교과 연계 탐구 프로젝트 운영 계획서의 교시 구분에 맞춰 정리했습니다.</p>
+<div class="schedule">
+<div class="time-row"><div><b>12.16.(수)</b><div>1~8교시 · 경주 일원</div></div><div><strong>현장답사 및 교과 융합 탐구</strong><p>국립경주박물관·교촌마을·최부자댁·월정교·첨성대·대릉원·황리단길에서 역사문화유산 조사, 공동체 가치 탐구, 지역사회 변화 분석</p></div></div>
+<div class="time-row"><div><b>12.17.(목)</b><div>1~2교시 · 1-8, 1-9반</div></div><div><strong>현장 기록 정리 및 탐구 쟁점 분석</strong><p>답사 자료, 사진 및 활동 기록을 정리하고 역사·사회·윤리 관점의 핵심 질문 도출</p></div></div>
+<div class="time-row"><div><b>12.17.(목)</b><div>3~4교시 · 1-8, 1-9반</div></div><div><strong>교과 융합 탐구 보고서 작성 및 공유</strong><p>현장 근거를 활용한 탐구 보고서 작성, 문화유산 보존과 지역사회 발전을 위한 실천 방안 제안</p></div></div>
+<div class="time-row"><div><b>12.17.(목)</b><div>5~8교시 · 체육관</div></div><div><strong>학교 공통 특별 활동</strong><p>학교 운영 계획에 따른 공통 특별 활동 참여</p></div></div>
+</div>
+</div></section>
+<section id="goals"><div class="wrap"><div class="eyebrow">LEARNING</div><h2>탐구 목표와 학습 과제</h2><p class="lede">역사적 사실을 근거로 해석하고, 사회적 갈등을 여러 시각에서 바라보며, 공동체의 윤리적 책임을 고민합니다.</p>
+<div class="tasks">
+<div class="task"><span class="subject">역사</span><h3>근거로 읽기</h3><p>현장에서 관찰한 유물·유적 한 가지를 선택해 역사적 배경과 의미를 정리합니다. 관찰한 사실과 자신의 해석을 구분합니다.</p></div>
+<div class="task"><span class="subject">사회</span><h3>이해관계 분석하기</h3><p>관광객·주민·상인·행정기관의 입장을 비교하고 문화유산의 보존과 활용에 관한 쟁점을 분석합니다.</p></div>
+<div class="task"><span class="subject">윤리</span><h3>가치 판단하기</h3><p>최부자댁의 사례에서 공동체 책임을 탐구하고 오늘날 실천 가능한 행동을 구체적으로 제안합니다.</p></div>
+</div></div></section>
+<section id="report" class="block-cream"><div class="wrap"><div class="eyebrow">REFLECTION WORKSHEET</div><h2>교과 융합 탐구 보고서</h2><p class="lede">아래 작성란은 개인 기기에서 임시로 기록할 수 있는 양식입니다. 작성한 내용을 인쇄하거나 텍스트 파일로 내려받아 별도 제출하세요. <strong>이 웹사이트에는 서버 제출 기능이 연결되어 있지 않습니다.</strong></p>
+<div class="report">
+<div class="fields">
+<div class="field"><label for="student">학년 · 반 · 번호 · 이름</label><input id="student" placeholder="예: 1학년 8반 00번 홍길동"></div>
+<div class="field"><label for="topic">탐구 주제</label><input id="topic" placeholder="예: 관광 개발과 문화유산 보존의 균형"></div>
+</div>
+<div class="field"><label for="observe">1. 답사 장소와 확인한 사실</label><textarea id="observe" placeholder="방문 장소, 관찰한 유적·유물, 현장 설명이나 자료에서 확인한 사실을 구체적으로 작성하세요."></textarea></div>
+<div class="field"><label for="link">2. 역사·사회·윤리 교과 연계 분석</label><textarea id="link" placeholder="역사적 배경과 사회적 쟁점, 윤리적 관점을 연결하고 근거를 제시하세요."></textarea></div>
+<div class="field"><label for="proposal">3. 나의 판단과 실천 방안</label><textarea id="proposal" placeholder="서로 다른 입장과 자신의 판단을 구분하고, 실천할 수 있는 방안을 제안하세요."></textarea></div>
+<div class="field"><label for="source">4. 참고 자료와 현장 기록</label><textarea id="source" placeholder="사진 촬영 위치, 현장 안내판, 박물관 설명 자료 등의 출처를 기록하세요."></textarea></div>
+<div class="form-actions print-hide"><button class="btn" type="button" id="save">이 기기에 임시 저장</button><button class="btn secondary" type="button" id="download">텍스트 파일 받기</button><button class="btn secondary" type="button" id="print">인쇄 / PDF</button><button class="btn secondary" type="button" id="clear">입력 초기화</button></div>
+<p class="status print-hide" id="status" aria-live="polite"></p>
+<p class="local-notice print-hide">개인정보 보호 안내: 이 양식은 입력 내용을 서버로 전송하지 않습니다. 공용 기기에서는 임시 저장을 사용하지 말고 작성 후 입력을 삭제하세요. 모바일·브라우저 설정에 따라 저장 내용이 사라질 수 있습니다.</p>
+</div></div></section>
+</main>
+<footer><div class="wrap"><strong>포항고등학교 · 인문사회부</strong><p>2026학년도 교과 연계 탐구 프로젝트 | 경주 역사·사회·윤리 융합 인문학 기행</p><p class="small">지도교사: 강명지 · 박기학 · 권형석 | 운영 일정과 방문지는 학교 사정에 따라 변경될 수 있음</p></div></footer>
+<script>
+(function(){
+  const ids=['student','topic','observe','link','proposal','source'], key='khs-gyeongju-2026-report-v1';
+  const val=id=>document.getElementById(id).value;
+  const status=document.getElementById('status');
+  const safe=s=>String(s||'').replace(/[\\/:*?"<>|]/g,'_');
+  try {const saved=JSON.parse(localStorage.getItem(key)||'{}'); ids.forEach(id=>{if(typeof saved[id]==='string')document.getElementById(id).value=saved[id]});}catch(e){}
+  document.getElementById('save').addEventListener('click',()=>{try{localStorage.setItem(key,JSON.stringify(Object.fromEntries(ids.map(id=>[id,val(id)]))));status.textContent='이 브라우저에 임시 저장했습니다. 서버에는 전송되지 않습니다.'}catch(e){status.textContent='이 브라우저에서는 저장되지 않습니다. 텍스트 파일을 이용하세요.'}});
+  document.getElementById('download').addEventListener('click',()=>{
+    const labels=['학년·반·번호·이름','탐구 주제','1. 답사 장소와 확인한 사실','2. 역사·사회·윤리 교과 연계 분석','3. 나의 판단과 실천 방안','4. 참고 자료와 현장 기록'];
+    const txt=['2026학년도 교과 연계 탐구 프로젝트 - 경주 인문학 기행 탐구 보고서','',...ids.flatMap((id,i)=>[labels[i],val(id),''])].join('\n');
+    const blob=new Blob(['\ufeff',txt],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+    a.href=url;a.download='경주_인문학기행_탐구보고서_'+safe(val('student')||'미기입')+'.txt';document.body.append(a);a.click();a.remove();URL.revokeObjectURL(url);
+    status.textContent='텍스트 파일을 만들었습니다. 실제 제출은 학교가 안내한 방법을 이용하세요.';
+  });
+  document.getElementById('print').addEventListener('click',()=>window.print());
+  document.getElementById('clear').addEventListener('click',()=>{
+    if(!confirm('작성한 입력 내용을 지우시겠습니까?'))return;
+    ids.forEach(id=>{document.getElementById(id).value=''});localStorage.removeItem(key);status.textContent='입력 내용과 이 기기의 임시 저장 내용을 삭제했습니다.';
+  });
+})();
+</script>
+</body></html>
