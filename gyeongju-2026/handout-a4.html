@@ -13,13 +13,13 @@
  .subtitle{font-size:11.7px;color:#566559}
  .meta{font-size:10.5px;text-align:right;color:#4c6055;line-height:1.6}
  .meta b{color:#244739}
- figure{margin:0;background:#f5f0e5;border:1px solid #d3d6cb;padding:1.2mm;position:relative;flex:none;height:119mm;display:grid;grid-template-columns:1fr;align-items:center;overflow:hidden}
+ figure{margin:0;background:#f5f0e5;border:1px solid #d3d6cb;padding:1.2mm;position:relative;flex:none;height:105mm;display:grid;grid-template-columns:1fr;align-items:center;overflow:hidden}
  figure img{width:100%;height:100%;object-fit:fill;display:block}
  .map-tag{position:absolute;right:3mm;bottom:2.3mm;background:#fffef5dd;padding:1mm 2.3mm;border:1px solid #d5dbc9;font-size:9px;color:#54685b}
  .section-title{display:flex;align-items:center;justify-content:space-between;gap:8mm;margin-top:1mm}
  h2{margin:0;color:#2f5545;font-size:14.3px;letter-spacing:-.04em}
  .section-title span{font-size:9.4px;color:#677469}
- .stops{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,34.5mm);gap:1.4mm 2.3mm;flex:none}
+ .stops{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,32.5mm);gap:1.4mm 2.3mm;flex:none}
  .stop{display:flex;align-items:center;justify-content:space-between;gap:1.5mm;background:#fff;border:1px solid #ced8cd;border-radius:2.3mm;padding:2.2mm 2.1mm;min-width:0;overflow:hidden}
  .stop-text{min-width:0;flex:1}
  .idline{display:flex;gap:1.6mm;align-items:baseline}
@@ -30,6 +30,10 @@
  .qr{display:block;width:22mm;flex:none;text-align:center;text-decoration:none;color:#465b4e}
  .qr img{width:20mm;height:20mm;display:block;object-fit:contain;background:#fff;image-rendering:auto}
  .qr small{display:block;font-size:8px}
+ .hand-notes{display:grid;grid-template-columns:1fr 1fr;gap:2.5mm;margin-top:1.5mm;flex:none}
+ .hand-note{border:1px solid #c6d1c4;border-radius:1.8mm;background:#fffdf7;padding:2mm 2.4mm;height:20mm}
+ .hand-note strong{font-size:10.7px;color:#285043}
+ .writing-lines{margin-top:2.5mm;background:repeating-linear-gradient(to bottom, transparent 0,transparent 5mm,#aebfaf 5mm,#aebfaf calc(5mm + 1px));height:10mm}
  footer{margin-top:auto;border-top:1px solid #c8d2c9;padding-top:1.8mm;display:flex;align-items:start;justify-content:space-between;gap:3.5mm}
  .note{max-width:76%;color:#566459;font-size:9.2px;line-height:1.55}
  .note b{color:#284a3d}
@@ -50,6 +54,7 @@
 <article class="stop"><div class="stop-text"><div class="idline"><span class="num">04</span><strong>첨성대</strong></div><span class="topic">통합사회1 · 통합적 관점</span><p>직접 본 구조와 자료에서 읽은 설명을 나누어 적는다.</p></div><a class="qr" href="guide.html#cheom" aria-label="첨성대 장소별 상세 요록"><img src="field/cheom-qr.svg" width="118" height="118" alt="첨성대 상세 해설 QR"><small>요록 열기</small></a></article>
 <article class="stop"><div class="stop-text"><div class="idline"><span class="num">05</span><strong>대릉원·천마총</strong></div><span class="topic">한국사1 · 고대 사회</span><p>고분·부장품을 통해 신라 사회의 차이를 추론한다.</p></div><a class="qr" href="guide.html#tumuli" aria-label="대릉원·천마총 장소별 상세 요록"><img src="field/tumuli-qr.svg" width="118" height="118" alt="대릉원·천마총 상세 해설 QR"><small>요록 열기</small></a></article>
 <article class="stop"><div class="stop-text"><div class="idline"><span class="num">06</span><strong>황리단길</strong></div><span class="topic">통합사회1·2 · 문화·경제</span><p>관광객·주민·상인의 입장에서 문화 변동을 분석한다.</p></div><a class="qr" href="guide.html#hwangri" aria-label="황리단길 장소별 상세 요록"><img src="field/hwangri-qr.svg" width="118" height="118" alt="황리단길 상세 해설 QR"><small>요록 열기</small></a></article></section>
+ <section class="hand-notes" aria-label="현장 기록칸"><div class="hand-note"><strong>내가 확인한 사실</strong><div class="writing-lines" aria-hidden="true"></div></div><div class="hand-note"><strong>더 알아보고 싶은 질문</strong><div class="writing-lines" aria-hidden="true"></div></div></section>
  <footer><div class="note"><b>교과 연계</b> · 통합사회1 [10통사1-01-02] 통합적 관점, [10통사1-04-02] 문화 변동 / 통합사회2 [10통사2-02-02] 공동체 정의, [10통사2-03-02] 경제 주체의 책임 / 한국사1 신라의 역사와 유물 해석. <b>포항고 통합사회1·2: 동아출판㈜</b>. 성취기준 연계이며 실제 진도·시험 범위와는 구분합니다.</div><div class="bottom"><strong>지도교사</strong><br>강명지 · 박기학 · 권형석<br><a href="https://khs-gyeongju-2026.pages.dev/" style="color:inherit;text-decoration:none">khs-gyeongju-2026.pages.dev</a></div></footer>
  </div>
  <div class="live">학생 배부용 A4 한 장 요록 · <a href="index.html">사이트로 돌아가기</a> · 브라우저 인쇄에서 <b>용지 A4 / 배율 100%</b>를 선택하세요.</div>

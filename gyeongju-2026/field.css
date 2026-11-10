@@ -1,3 +1,4 @@
+@import url("./hallmark-site.css");
 .field-links, .field-actions { display:flex; flex-wrap:wrap; gap:8px 16px; }
 .field-links { margin-top:20px; }
 .field-media { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:18px; margin:16px 0 22px; align-items:start; }

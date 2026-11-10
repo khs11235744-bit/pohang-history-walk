@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>현장에서 기록하기 | 경주 인문학 기행</title>
+<meta name="description" content="경주 인문학 기행 현장 관찰과 질문을 기록하고 모두의 설문으로 제출합니다.">
+<style>
+/* Hallmark v2 · editorial field note · purpose: capture one observation at the site; no decorative hero, no fabricated claims */
+/* Critique: place and one action dominate; handoff is explicit about not being an actual submission. */
+:root{--paper:#f5f2eb;--white:#fffdf7;--ink:#24372e;--muted:#617064;--line:#c9d2c7;--leaf:#285342;--focus:#b16642;--tint:#e5ece3;--sans:"Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif;--serif:"Batang","Noto Serif KR",serif;--roman:Georgia,serif}
+html,body{margin:0;overflow-x:clip}
+*{box-sizing:border-box}
+body{color:var(--ink);background:var(--paper);font:16px/1.68 var(--sans)}
+a{color:inherit;text-underline-offset:3px}
+button,input,textarea,select{font:inherit}
+:where(a,button,input,textarea,select):focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.head{border-bottom:1px solid var(--line);background:var(--white)}
+.head-inner{max-width:1100px;margin:auto;padding:17px 24px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{font-size:15px;font-weight:800;text-decoration:none}
+.head-links{display:flex;gap:18px;align-items:center;font-size:13px;font-weight:650}
+.head-links a{text-decoration:none}
+.main{max-width:1100px;margin:auto;padding:58px 24px 85px;display:grid;grid-template-columns:minmax(0,.66fr) minmax(0,1.34fr);column-gap:70px}
+.side{border-top:2px solid var(--leaf);padding-top:18px}
+.side h1{font-family:var(--serif);font-size:clamp(30px,3.6vw,43px);font-weight:700;letter-spacing:-.065em;line-height:1.35;margin:15px 0 16px}
+.side p{font-size:15px;color:var(--muted);margin:0 0 18px;max-width:31ch}
+.place-no{font-family:var(--roman);font-size:19px;color:var(--leaf);font-weight:800}
+.side-links{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);display:grid;gap:11px;font-size:14px}
+.sheet{min-width:0;background:var(--white);border:1px solid var(--line);padding:34px 40px 31px}
+.sheet h2{font-family:var(--serif);font-size:24px;letter-spacing:-.055em;margin:0 0 7px}
+.sheet .lede{margin:0 0 26px;color:var(--muted);font-size:14px}
+.field{margin:22px 0}
+label{display:block;font-size:14px;font-weight:800;margin-bottom:8px}
+textarea,select{width:100%;color:var(--ink);border:1px solid var(--line);background:var(--white);border-radius:2px;padding:13px 14px;line-height:1.65}
+textarea{min-height:118px;resize:vertical}
+.field small{display:block;margin-top:6px;color:var(--muted);font-size:12px}
+.actions{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin-top:26px}
+.btn{background:var(--leaf);border:1px solid var(--leaf);color:var(--white);padding:12px 19px;border-radius:3px;font-weight:750;cursor:pointer;transition:transform .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn.alt{background:var(--white);color:var(--leaf)}
+.status{min-height:28px;margin:16px 0 0;color:var(--leaf);font-size:13px;font-weight:700}
+.privacy{border-top:1px solid var(--line);margin-top:24px;padding-top:16px;font-size:13px;color:var(--muted)}
+.footer{max-width:1100px;margin:auto;padding:19px 24px 35px;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
+@media(max-width:760px){.head-inner{padding:14px 18px}.head-links{gap:11px}.head-links a{font-size:12px}.main{display:block;padding:32px 16px 65px}.side{margin-bottom:22px}.side h1{font-size:31px}.side p{max-width:unset}.side-links{margin-top:14px;display:flex;flex-wrap:wrap;gap:15px}.sheet{padding:22px 19px}.footer{padding:16px 18px 29px}}
+@media(prefers-reduced-motion:reduce){.btn{transition:none}.btn:hover{transform:none}}
+</style></head>
+<body>
+<header class="head"><div class="head-inner"><a class="brand" href="index.html">포항고등학교 경주 인문학 기행</a><nav class="head-links" aria-label="이동"><a href="map.html">그림지도</a><a href="curriculum.html">교과 연결</a><a href="report.html">탐구 보고서</a></nav></div></header>
+<main class="main">
+<aside class="side"><span id="num" class="place-no"></span><h1 id="placeTitle">현장에서 기록하기</h1><p id="placeIntro">현장에서 본 내용과 자신의 질문을 나눠 적으세요.</p><div class="side-links"><a id="guideLink" href="guide.html">이 장소의 역사 해설</a><a href="curriculum.html">관련 성취기준 확인</a><a href="map.html">다른 장소 선택</a></div></aside>
+<section class="sheet" aria-labelledby="sheetTitle">
+<h2 id="sheetTitle">관찰 한 가지, 질문 한 가지</h2><p class="lede">현장에서 기록한 초안을 저장한 뒤 「모두의 설문」에서 학번과 이름을 확인해 제출합니다.</p>
+<form id="record" novalidate>
+<div class="field"><label for="observation">1. 직접 본 사실</label><textarea id="observation" maxlength="2000" required placeholder="유물, 건물, 사람들의 공간 이용 등 실제로 확인한 것만 적으세요."></textarea><small>안내판에서 읽은 내용은 직접 본 사실과 구분하세요.</small></div>
+<div class="field"><label for="question">2. 궁금해진 점</label><textarea id="question" maxlength="2000" required placeholder="왜 그런 모습이 나타났는지, 추가로 확인해야 할 것은 무엇인지 질문해 보세요."></textarea></div>
+<div class="field"><label for="source">3. 확인한 자료·사진 설명</label><textarea id="source" maxlength="2000" placeholder="예: 현장 안내판 제목, 전시실 이름, 사진을 찍은 위치"></textarea></div>
+<div class="field"><label for="curriculum">4. 연결할 과목</label><select id="curriculum" required><option value="">과목 선택</option><option value="통합사회1">통합사회1</option><option value="통합사회2">통합사회2</option><option value="한국사1">한국사1</option><option value="역사·사회·윤리 융합">역사·사회·윤리 융합</option></select></div>
+<div class="actions"><button id="save" type="button" class="btn alt">이 기기에 임시 저장</button><button id="send" type="button" class="btn">모두의 설문 제출창 열기</button></div><p id="status" class="status" role="status" aria-live="polite"></p>
+</form>
+<p class="privacy">여기서는 이름이나 학번을 수집하지 않습니다. ‘제출창 열기’는 자동 제출이 아니며, 새 창에서 본인 정보를 입력하고 <b>설문 제출하기</b>를 눌러야 서버에 기록됩니다. 저장된 메모는 이 기기에만 남습니다.</p>
+</section></main><footer class="footer">2026년 12월 16일 경주 답사 · 12월 17일 교내 보고서 작성 · 장소별 기록은 학생의 자기보고이며, 교사는 실제 활동 사실을 별도로 확인합니다.</footer>
+<script>
+(function(){
+const sites={
+museum:{name:"국립경주박물관",num:"장소 01",intro:"전시 유물 한 점을 골라, 물건 자체에서 확인한 사실과 설명문에서 읽은 내용을 나눠 보세요.",subject:"한국사1"},
+gyochon:{name:"교촌마을·최부자댁",num:"장소 02",intro:"최부자 가문의 가훈을 살펴보고 오늘날 공동체의 책임과 어떤 관련이 있을지 질문해 보세요.",subject:"통합사회2"},
+woljeong:{name:"월정교",num:"장소 03",intro:"복원된 다리에서 보이는 구조와 기록을 통해 확인한 사실을 따로 적어 보세요.",subject:"한국사1"},
+cheom:{name:"첨성대",num:"장소 04",intro:"직접 볼 수 있는 구조적 특징과 천문 관측 시설이라는 해석의 차이를 적어 보세요.",subject:"한국사1"},
+tumuli:{name:"대릉원·천마총",num:"장소 05",intro:"고분의 크기와 배치를 관찰하고, 그 사실로 알기 어려운 점까지 적어 보세요.",subject:"한국사1"},
+hwangri:{name:"황리단길",num:"장소 06",intro:"관광객과 가게, 주거 공간을 관찰하고 주민과 상인의 입장에서 다른 질문을 만들어 보세요.",subject:"통합사회1"},
+jjoksaem:{name:"쪽샘유적발굴관",num:"선택 탐구",intro:"발굴 현장이나 관련 자료를 살펴본 경우에만 작성하세요. 실제로 방문하지 않았으면 방문한 것처럼 쓰지 마세요.",subject:"한국사1"}
+};
+const url=new URL(location.href),key=url.searchParams.get("place")||"museum";
+const item=Object.prototype.hasOwnProperty.call(sites,key)?sites[key]:sites.museum;
+const id=Object.prototype.hasOwnProperty.call(sites,key)?key:"museum";
+const $=x=>document.getElementById(x);
+$("num").textContent=item.num;$("placeTitle").textContent=item.name;$("placeIntro").textContent=item.intro;$("guideLink").href="guide.html#"+id;
+$("curriculum").value=item.subject;
+const storageKey="khs-gyeongju-field-v1-"+id;
+try{const saved=JSON.parse(localStorage.getItem(storageKey)||"{}");for(const x of ["observation","question","source","curriculum"]){if(typeof saved[x]==="string")$(x).value=saved[x];}}catch{}
+const status=s=>$("status").textContent=s;
+function values(){return {place:item.name,observation:$("observation").value.trim(),question:$("question").value.trim(),source:$("source").value.trim(),curriculum:$("curriculum").value}}
+function save(silent=false){try{localStorage.setItem(storageKey,JSON.stringify(values()));if(!silent)status("이 기기에 임시 저장했습니다. 제출은 별도로 해야 합니다.");return true;}catch{status("이 기기의 저장 공간이 제한되었습니다. 필요한 문장을 복사해 보관하세요.");return false;}}
+$("save").onclick=()=>save();
+$("send").onclick=()=>{
+ const data=values();
+ if(!data.observation||!data.question||!data.curriculum){status("관찰한 사실, 질문, 연결 과목을 모두 적어 주세요.");$("record").reportValidity();return;}
+ save(true);
+ const dest="https://khs-all-survey-independent.khs11235744.workers.dev",popup=window.open(dest+"/s/gyeongju-2026-field","_blank");
+ if(!popup){status("팝업이 차단되었습니다. 이 사이트의 팝업을 허용한 뒤 다시 선택하세요.");return;}
+ let done=false;
+ const onMsg=e=>{if(e.origin!==dest||e.source!==popup||e.data?.type!=="KHS_GYEONGJU_DRAFT_ACK_V1")return;done=true;clearInterval(timer);clearTimeout(deadline);window.removeEventListener("message",onMsg);status("기록을 새 창의 설문 입력칸으로 옮겼습니다. 학번과 이름을 입력하고 내용을 확인한 뒤 직접 제출하세요.");};
+ window.addEventListener("message",onMsg);
+ const timer=setInterval(()=>{if(popup.closed){clearInterval(timer);clearTimeout(deadline);window.removeEventListener("message",onMsg);return;}popup.postMessage({type:"KHS_GYEONGJU_DRAFT_V1",draft:data},dest);},450);
+ const deadline=setTimeout(()=>{clearInterval(timer);window.removeEventListener("message",onMsg);if(!done)status("입력칸 자동 채우기를 확인하지 못했습니다. 새 창에서 내용을 확인하거나 직접 붙여넣으세요.");},14000);
+ status("설문 입력창을 열었습니다. 창이 뜨면 학번과 이름을 확인하세요.");
+};
+})();
+</script></body></html>

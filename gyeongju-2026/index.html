@@ -4,74 +4,29 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="포항고등학교 2026학년도 교과 연계 탐구 프로젝트 - 경주 역사·사회·윤리 융합 인문학 기행">
 <title>경주 인문학 기행 | 2026 교과 연계 탐구 프로젝트 | 포항고등학교</title>
-<style>
-:root{--ink:#1d2826;--muted:#61706b;--paper:#fbfaf5;--cream:#f3efe5;--gold:#b28548;--green:#234d45;--line:#dcded4;--white:#fff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font-family:system-ui,-apple-system,'Malgun Gothic','Apple SD Gothic Neo',sans-serif;line-height:1.68;word-break:keep-all}
-a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}button{cursor:pointer}
-.wrap{width:min(1100px,calc(100% - 38px));margin:auto}
-header{position:sticky;top:0;z-index:20;background:#fbfaf5ed;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
-.header{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:72px}
-.brand{font-weight:800;line-height:1.24;letter-spacing:-.04em}.brand small{display:block;font-size:12px;font-weight:500;color:var(--muted)}
-nav{display:flex;gap:22px;font-size:14px;font-weight:700}nav a:hover{color:var(--green);text-decoration:underline}
-.hero{background:linear-gradient(115deg,#1e3934,#315b4e 64%,#5b6c4d);color:white;overflow:hidden;position:relative}
-.hero:after{content:"慶州";position:absolute;right:-20px;bottom:-105px;font-size:clamp(170px,28vw,330px);font-family:serif;opacity:.10;pointer-events:none}
-.hero-inner{position:relative;z-index:1;padding:86px 0 78px;max-width:900px}
-.kicker{font-weight:750;letter-spacing:.09em;font-size:13px;color:#d9c193}.hero h1{font-size:clamp(36px,5.8vw,69px);line-height:1.22;letter-spacing:-.058em;margin:16px 0 18px}
-.hero p{font-size:clamp(15px,1.9vw,19px);max-width:750px;color:#e5ebe5}
-.pills{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0 30px}.pills span{border:1px solid #acc6b78f;border-radius:99px;padding:7px 14px;font-size:13px;background:#ffffff12}
-.action{display:inline-flex;gap:10px;align-items:center;background:#f2eee2;color:#1d3530;padding:13px 21px;border-radius:8px;font-weight:800;border:0}.action.alt{background:transparent;border:1px solid #bed2c7;color:white}
-section{padding:68px 0}.eyebrow{font-size:12px;letter-spacing:.16em;color:#7b6d4c;font-weight:800;text-transform:uppercase}
-h2{font-size:clamp(26px,3vw,38px);line-height:1.28;letter-spacing:-.045em;margin:6px 0 14px}
-.lede{color:var(--muted);max-width:790px;margin:0 0 25px}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;transform:translateY(-24px)}
-.stat{background:white;box-shadow:0 8px 26px #182d2610;border:1px solid var(--line);border-radius:14px;padding:21px 24px}
-.stat strong{display:block;font-size:23px;color:var(--green)}.stat span{font-size:13px;color:var(--muted)}
-.route{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.place{background:white;border:1px solid var(--line);border-radius:14px;padding:25px 25px 24px;position:relative;min-height:175px}
-.place .num{position:absolute;right:20px;top:15px;font-family:Georgia,serif;font-size:40px;color:#e5e9df;font-weight:800}
-.place h3{font-size:20px;margin:6px 0}.place p{margin:0;color:#55615d;font-size:15px}
-.subject{font-size:12px;display:inline-flex;background:#e9eee8;color:var(--green);font-weight:800;padding:4px 9px;border-radius:4px}
-.schedule{border:1px solid var(--line);border-radius:13px;overflow:hidden;background:white}
-.time-row{display:grid;grid-template-columns:170px 1fr;gap:20px;padding:21px 24px;border-bottom:1px solid var(--line)}
-.time-row:last-child{border-bottom:0}.time-row b{color:var(--green)}.time-row p{margin:3px 0 0;color:var(--muted);font-size:14px}
-.note{background:#f4efe2;border-left:3px solid var(--gold);padding:16px 19px;border-radius:0 8px 8px 0;font-size:14px;color:#555245;margin-top:22px}
-.block-cream{background:var(--cream)}
-.tasks{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.task{padding:23px;background:white;border-radius:12px;border:1px solid var(--line)}.task h3{margin:4px 0 6px;font-size:18px}.task p{font-size:14px;color:var(--muted);margin:0}
-.report{border-radius:15px;background:white;border:1px solid var(--line);padding:26px}
-.fields{display:grid;grid-template-columns:1fr 1fr;gap:18px}.field{display:flex;flex-direction:column;gap:5px;margin:12px 0}
-.field label{font-size:13px;font-weight:800}.field input,.field textarea,.field select{padding:11px 12px;border:1px solid #bfc9c3;background:#fff;border-radius:7px;width:100%;color:#1d2826}
-.field textarea{min-height:105px;resize:vertical}.form-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:17px}
-.btn{border:0;padding:11px 17px;background:var(--green);color:white;font-weight:800;border-radius:7px}.btn.secondary{color:var(--green);background:#e7eee9}
-.local-notice{font-size:13px;color:#6a7068;margin:15px 0 0}.status{min-height:20px;font-size:13px;color:var(--green)}
-footer{background:#162e29;color:#dfebe4;padding:35px 0;font-size:13px}
-footer p{margin:4px 0}footer .small{color:#bacdc2}
-@media(max-width:720px){.header{align-items:flex-start;padding:14px 0;flex-direction:column}nav{flex-wrap:wrap;gap:9px 16px}.hero-inner{padding:57px 0 65px}.stats{grid-template-columns:1fr;transform:translateY(-12px)}.route,.tasks,.fields{grid-template-columns:1fr}.time-row{grid-template-columns:1fr;gap:4px;padding:16px 20px}section{padding:45px 0}.report{padding:18px}}
-@media print{header,.hero,.stats,.print-hide,footer,#route,#schedule,#goals{display:none!important}body{background:white}section{padding:0}.block-cream{background:white}#report{display:block!important}.report{border:0;padding:0}.field textarea{border:1px solid #aaa;min-height:100px}.field input{border:1px solid #aaa}.wrap{width:100%}.note{display:none}h2{font-size:24px}}
-</style>
-<link rel="stylesheet" href="portal.css"><style>.resource-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.map-thumbnail{display:block;border:0;line-height:0}.map-thumbnail img{display:block;width:100%;height:auto;border-radius:4px}.map-thumbnail:focus-visible{outline:3px solid #a37e49;outline-offset:4px}.map-caption{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:12px;font-size:12px;color:#55705f}.map-caption b{font-size:13px}.hero-visual{padding:10px}@media(max-width:850px){.resource-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:580px){.resource-grid{grid-template-columns:1fr}}</style>
+<link rel="stylesheet" href="hallmark-site.css">
 </head>
 <body>
-<header><div class="wrap header"><a class="brand" href="#top">포항고등학교 인문학 기행<small>2026 교과 연계 탐구 프로젝트 · 경주</small></a><nav aria-label="주 메뉴"><a href="map.html">그림지도</a><a href="curriculum.html">수업·성취기준</a><a href="guide.html">장소별 요록</a><a href="learning.html">활동지</a><a href="report.html">보고서</a><a href="teacher.html">교사용</a></nav></div></header>
+<header><div class="wrap header"><a class="brand" href="#top">포항고등학교 인문학 기행<small>2026 교과 연계 탐구 프로젝트 · 경주</small></a><nav aria-label="주 메뉴"><a href="map.html">그림지도</a><a href="curriculum.html">수업·성취기준</a><a href="guide.html">장소별 요록</a><a href="learning.html">활동지</a><a href="field-qr.html">현장 기록</a><a href="report.html">보고서</a><a href="teacher.html">교사용</a></nav></div></header>
 <main id="top">
 <div class="hero"><div class="wrap hero-inner"><div class="hero-copy">
-<div class="kicker">포항고등학교 · 2026 교과 연계 탐구 프로젝트</div>
-<h1>역사의 발자취를 따라,<br>사회의 가치를 찾아,<br>미래의 윤리를 향해</h1>
-<p>12월 16일에는 경주의 유적과 박물관을 답사하고, 17일에는 현장에서 기록한 내용을 바탕으로 탐구 보고서를 작성합니다. 역사적 사실을 확인하고, 지역사회의 변화와 문화유산 보존 문제를 함께 살펴봅니다.</p>
-<div class="pills"><span>2026. 12. 16.(수) ~ 17.(목)</span><span>1·2학년 무학년제</span><span>참여 학생 30명</span><span>지도교사 강명지 · 박기학 · 권형석</span></div>
-<a class="action" href="map.html">경주 그림지도 보기</a> <a class="action alt" href="guide.html">현장 요록 읽기</a>
-</div><div class="hero-visual"><a class="map-thumbnail" href="map.html" aria-label="경주 그림지도 자세히 보기"><img src="district-map.svg" alt="경주 중심 유적지 그림 약도. 서쪽 황리단길·대릉원, 중앙 첨성대, 남쪽 교촌마을·월정교, 동남쪽 경주박물관" width="1120" height="710" loading="eager"></a><div class="map-caption"><b>경주 답사 그림지도</b><span>지도를 누르면 장소별 해설로 이동합니다.</span></div><div class="figcap"><span>장소별 학습 지도</span><span>※ 실제 거리·도로·이동순서는 표시하지 않음</span></div></div></div>
+<h1>경주에서<br>무엇을 볼까?</h1>
+<p>16일에는 유적을 직접 조사하고, 17일에는 현장 기록으로 보고서를 씁니다.</p>
+<a class="action" href="map.html">경주 그림지도 보기</a> <a class="action alt" href="field-qr.html">현장에서 기록하기</a>
+<p class="course-title">역사의 발자취를 따라, 사회의 가치를 찾아, 미래의 윤리를 향해</p>
+<div class="pills"><span>12월 16일(수) 경주 현장답사</span><span>12월 17일(목) 교내 보고서 작성</span><span>1~2학년 참가 학생 30명</span><span>지도교사: 강명지, 박기학, 권형석</span></div>
+</div><div class="hero-visual"><a class="map-thumbnail" href="map.html" aria-label="경주 그림지도 자세히 보기"><img src="assets/map-art/gyeongju-cartoon-option2.webp" alt="경주 주요 유적을 그린 카툰 관광 일러스트. 실제 답사 장소와 다른 유적도 포함된 참고 그림입니다. 정확한 여섯 학습 장소는 클릭 지도에서 확인하세요." width="1280" height="853" loading="eager" decoding="async"></a><div class="map-caption"><b>카툰풍 경주 관광 일러스트</b><span>그림을 누르면 이번 답사 장소 여섯 곳의 정확한 클릭 지도와 학습자료를 볼 수 있습니다.</span></div><div class="figcap"><span>2번 카툰 스타일 적용</span><span>※ 관광 삽화의 지명·일정은 참고용이며, 실제 코스는 클릭 지도·안내문 기준</span></div></div></div>
 <div class="wrap stats" aria-label="운영 요약"><div class="stat"><strong>12월 16일</strong><span>경주 역사문화유산 현장답사</span></div><div class="stat"><strong>12월 17일</strong><span>1-8·1-9반 / 탐구 보고서 작성</span></div><div class="stat"><strong>역사 × 사회 × 윤리</strong><span>현장 조사·자료 분석·보고서 작성</span></div></div>
-<section id="resources" class="resources"><div class="wrap"><div class="resource-head"><div><div class="eyebrow">현장 탐구 자료실</div><h2>읽고, 살펴보고, 기록하기</h2><p>경주 답사를 준비할 때부터 교실에서 보고서를 마칠 때까지 필요한 자료를 정리했습니다.</p></div></div><div class="resource-grid"><a class="rescard" href="map.html"><span class="resno">01</span><h3>경주 그림지도</h3><p>대릉원·첨성대·교촌마을·월정교·경주박물관을 클릭해서 장소별 탐구 과제를 확인합니다.</p><span class="resbottom">그림지도 열기 ↗</span></a><a class="rescard" href="curriculum.html"><span class="resno">02</span><h3>수업·성취기준</h3><p>통합사회1·2와 한국사1의 성취기준 8개를 실제 방문 장소·활동 질문과 연결했습니다.</p><span class="resbottom">교과 연계 보기 ↗</span></a><a class="rescard" href="guide.html"><span class="resno">03</span><h3>장소별 요록</h3><p>장소별 사진과 지도, 음성 해설, 교과별 학습목표</p><span class="resbottom">상세 해설 읽기 ↗</span></a><a class="rescard" href="learning.html"><span class="resno">04</span><h3>학생 탐구 활동지</h3><p>현장 관찰 기록, 교과별 질문, 이해 점검</p><span class="resbottom">활동지 열기 ↗</span></a><a class="rescard" href="report.html"><span class="resno">05</span><h3>현장 탐구 보고서</h3><p>자료 근거, 다른 입장, 사진 첨부와 인쇄</p><span class="resbottom">보고서 작성 ↗</span></a><a class="rescard" href="teacher.html"><span class="resno">06</span><h3>교사용 지도 자료</h3><p>교육과정 성취기준, 20점 평가표, 세특 관찰 기록</p><span class="resbottom">지도 자료 보기 ↗</span></a></div><div class="handout-shortcuts" style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:20px 0;padding:16px;background:#eef2eb;border:1px solid #d2dbd3;border-radius:8px"><b style="color:#285142">학생 배부 자료</b><a href="gyeongju-field-handout-a4.pdf" download style="padding:7px 11px;background:white;border:1px solid #cad6cb;border-radius:5px;font-size:13px;font-weight:800">A4 한 장 PDF</a><a href="gyeongju-field-handout-b4.pdf" download style="padding:7px 11px;background:white;border:1px solid #cad6cb;border-radius:5px;font-size:13px;font-weight:800">B4 한 장 PDF</a><a href="field-qr.html" style="padding:7px 11px;background:white;border:1px solid #cad6cb;border-radius:5px;font-size:13px;font-weight:800">현장 QR 모음</a></div><div class="concept-box"><strong>활용 순서</strong><div>답사 전에는 요록에서 장소별 배경을 읽고, 현장에서는 활동지에 사실을 기록합니다. 12월 17일에는 기록을 골라 탐구 보고서로 정리하세요. <a href="field-qr.html">장소별 QR 인쇄</a></div></div></div></section>
+<section id="resources" class="resources"><div class="wrap"><div class="resource-head"><div><h2>답사 자료 모음</h2><p>경주 답사를 준비할 때부터 교실에서 보고서를 마칠 때까지 필요한 자료를 정리했습니다.</p></div></div><div class="resource-grid"><a class="rescard" href="map.html"><span class="resno">01</span><h3>경주 그림지도</h3><p>대릉원·첨성대·교촌마을·월정교·경주박물관을 클릭해서 장소별 탐구 과제를 확인합니다.</p><span class="resbottom">그림지도 열기 </span></a><a class="rescard" href="curriculum.html"><span class="resno">02</span><h3>수업·성취기준</h3><p>통합사회1·2와 한국사1의 성취기준 8개를 실제 방문 장소·활동 질문과 연결했습니다.</p><span class="resbottom">교과 연계 보기 </span></a><a class="rescard" href="guide.html"><span class="resno">03</span><h3>장소별 요록</h3><p>장소별 사진과 지도, 음성 해설, 교과별 학습목표</p><span class="resbottom">상세 해설 읽기 </span></a><a class="rescard" href="learning.html"><span class="resno">04</span><h3>학생 탐구 활동지</h3><p>현장 관찰 기록, 교과별 질문, 이해 점검</p><span class="resbottom">활동지 열기 </span></a><a class="rescard" href="report.html"><span class="resno">05</span><h3>현장 탐구 보고서</h3><p>자료 근거, 다른 입장, 사진 첨부와 인쇄</p><span class="resbottom">보고서 작성 </span></a><a class="rescard" href="teacher.html"><span class="resno">06</span><h3>교사용 지도 자료</h3><p>교육과정 성취기준, 20점 평가표, 세특 관찰 기록</p><span class="resbottom">지도 자료 보기 </span></a></div><div class="handout-shortcuts"><b>학생 배부 자료</b><a href="gyeongju-field-handout-a4.pdf" download>A4 한 장 PDF</a><a href="gyeongju-field-handout-b4.pdf" download>B4 한 장 PDF</a><a href="field-qr.html">현장 QR 모음</a><a href="field-entry.html?place=museum">현장 기록장</a></div><div class="concept-box"><strong>활용 순서</strong><div>답사 전에는 요록에서 장소별 배경을 읽고, 현장에서는 활동지에 사실을 기록합니다. 12월 17일에는 기록을 골라 탐구 보고서로 정리하세요. <a href="field-qr.html">장소별 QR 인쇄</a></div></div></div></section>
 <section id="route"><div class="wrap"><div class="eyebrow">12월 16일 · 현장답사</div><h2>방문 장소와 현장 탐구 과제</h2>
 <p class="lede">박물관과 유적, 오래된 마을과 관광 거리를 둘러봅니다. 장소별로 무엇을 관찰하고 어떤 근거를 기록할지 미리 확인하세요. 방문 순서와 세부 일정은 현장 여건에 따라 달라질 수 있습니다.</p>
 <div class="route">
-<article class="place"><span class="subject">역사 · 문화</span><span class="num">01</span><h3>국립경주박물관</h3><p>전시 유물 한 점을 골라 제작 시기와 용도, 당시 사람들의 생활을 알아봅니다. 안내문에서 확인한 내용과 직접 관찰한 특징을 나누어 적어 보세요.</p><a class="place-guide-link" href="guide.html#museum">장소별 해설·학습목표</a></article>
-<article class="place"><span class="subject">사회 · 윤리</span><span class="num">02</span><h3>교촌마을 · 최부자댁</h3><p>최부자 가문에 전해지는 나눔의 원칙을 살펴봅니다. 재산을 개인만의 것으로 볼 수 없는 이유가 무엇인지, 오늘날의 사례와 비교해 봅니다.</p><a class="place-guide-link" href="guide.html#gyochon">장소별 해설·학습목표</a></article>
-<article class="place"><span class="subject">역사 · 윤리</span><span class="num">03</span><h3>월정교</h3><p>복원된 다리를 직접 살펴보고 옛 모습을 되살리는 데 필요한 자료가 무엇인지 생각합니다. 복원과 보존은 어떻게 다른지도 기록해 봅니다.</p><a class="place-guide-link" href="guide.html#woljeong">장소별 해설·학습목표</a></article>
-<article class="place"><span class="subject">역사 · 과학문화</span><span class="num">04</span><h3>첨성대</h3><p>첨성대의 형태와 구조를 관찰합니다. 천문 관측 시설이라는 설명의 근거를 찾고, 아직 해석이 필요한 부분은 무엇인지 살펴봅니다.</p><a class="place-guide-link" href="guide.html#cheom">장소별 해설·학습목표</a></article>
-<article class="place"><span class="subject">역사 · 사회</span><span class="num">05</span><h3>대릉원</h3><p>고분의 크기와 배치를 살펴보고 당시 지배층의 위상을 생각해 봅니다. 많은 사람이 찾는 유적을 어떻게 관리해야 할지도 함께 기록합니다.</p><a class="place-guide-link" href="guide.html#tumuli">장소별 해설·학습목표</a></article>
-<article class="place"><span class="subject">사회 · 지역탐구</span><span class="num">06</span><h3>황리단길</h3><p>관광객이 늘면서 달라진 거리의 모습을 관찰합니다. 관광객·상인·주민에게 각각 좋은 점과 불편한 점이 무엇일지 정리해 보세요.</p><a class="place-guide-link" href="guide.html#hwangri">장소별 해설·학습목표</a></article>
+<article class="place"><span class="subject">역사 · 문화</span><span class="num">01</span><h3>국립경주박물관</h3><p>전시 유물 한 점을 골라 제작 시기와 용도, 당시 사람들의 생활을 알아봅니다. 안내문에서 확인한 내용과 직접 관찰한 특징을 나누어 적어 보세요.</p><a class="place-guide-link" href="guide.html#museum">장소 해설</a> <a class="place-guide-link" href="field-entry.html?place=museum">현장에서 기록하기</a></article>
+<article class="place"><span class="subject">사회 · 윤리</span><span class="num">02</span><h3>교촌마을 · 최부자댁</h3><p>최부자 가문에 전해지는 나눔의 원칙을 살펴봅니다. 재산을 개인만의 것으로 볼 수 없는 이유가 무엇인지, 오늘날의 사례와 비교해 봅니다.</p><a class="place-guide-link" href="guide.html#gyochon">장소 해설</a> <a class="place-guide-link" href="field-entry.html?place=gyochon">현장에서 기록하기</a></article>
+<article class="place"><span class="subject">역사 · 윤리</span><span class="num">03</span><h3>월정교</h3><p>복원된 다리를 직접 살펴보고 옛 모습을 되살리는 데 필요한 자료가 무엇인지 생각합니다. 복원과 보존은 어떻게 다른지도 기록해 봅니다.</p><a class="place-guide-link" href="guide.html#woljeong">장소 해설</a> <a class="place-guide-link" href="field-entry.html?place=woljeong">현장에서 기록하기</a></article>
+<article class="place"><span class="subject">역사 · 과학문화</span><span class="num">04</span><h3>첨성대</h3><p>첨성대의 형태와 구조를 관찰합니다. 천문 관측 시설이라는 설명의 근거를 찾고, 아직 해석이 필요한 부분은 무엇인지 살펴봅니다.</p><a class="place-guide-link" href="guide.html#cheom">장소 해설</a> <a class="place-guide-link" href="field-entry.html?place=cheom">현장에서 기록하기</a></article>
+<article class="place"><span class="subject">역사 · 사회</span><span class="num">05</span><h3>대릉원</h3><p>고분의 크기와 배치를 살펴보고 당시 지배층의 위상을 생각해 봅니다. 많은 사람이 찾는 유적을 어떻게 관리해야 할지도 함께 기록합니다.</p><a class="place-guide-link" href="guide.html#tumuli">장소 해설</a> <a class="place-guide-link" href="field-entry.html?place=tumuli">현장에서 기록하기</a></article>
+<article class="place"><span class="subject">사회 · 지역탐구</span><span class="num">06</span><h3>황리단길</h3><p>관광객이 늘면서 달라진 거리의 모습을 관찰합니다. 관광객·상인·주민에게 각각 좋은 점과 불편한 점이 무엇일지 정리해 보세요.</p><a class="place-guide-link" href="guide.html#hwangri">장소 해설</a> <a class="place-guide-link" href="field-entry.html?place=hwangri">현장에서 기록하기</a></article>
 </div>
 <div class="note">※ 방문 장소와 활동 순서는 운영 여건에 따라 일부 변경될 수 있습니다. 현장에서는 지도교사의 안전 안내와 집결 지침을 따릅니다.</div>
 </div></section>
@@ -83,16 +38,16 @@ footer p{margin:4px 0}footer .small{color:#bacdc2}
 <div class="time-row"><div><b>12.17.(목)</b><div>5~8교시 · 체육관</div></div><div><strong>학교 공통 특별 활동</strong><p>학교 운영 계획에 따른 공통 특별 활동 참여</p></div></div>
 </div>
 </div></section>
-<section id="goals"><div class="wrap"><div class="eyebrow">탐구 활동</div><h2>현장에서 살펴볼 세 가지</h2><p class="lede">답사에서 보고 들은 내용을 그대로 옮기는 데 그치지 않고, 자료를 근거로 자신의 생각을 설명하는 것이 목표입니다.</p>
+<section id="goals"><div class="wrap"><h2>현장에서 살펴볼 세 가지</h2><p class="lede">답사에서 보고 들은 내용을 그대로 옮기는 데 그치지 않고, 자료를 근거로 자신의 생각을 설명하는 것이 목표입니다.</p>
 <div class="tasks">
 <div class="task"><span class="subject">역사</span><h3>사실과 해석 구분하기</h3><p>유물이나 유적 한 가지를 고르고, 현장에서 직접 본 것과 안내 자료를 통해 알게 된 것을 따로 적습니다.</p></div>
 <div class="task"><span class="subject">사회</span><h3>서로 다른 입장 비교하기</h3><p>관광객과 주민, 상인의 입장을 나누어 생각해 봅니다. 누구에게 이익이 되고 어떤 불편이 생기는지 근거를 찾아보세요.</p></div>
 <div class="task"><span class="subject">윤리</span><h3>나눔과 책임 생각하기</h3><p>최부자 가문의 사례를 바탕으로 개인의 재산과 지역사회의 관계를 생각하고, 오늘날 적용할 만한 원칙을 찾아봅니다.</p></div>
 </div></div></section>
 <section id="report" class="block-cream"><div class="wrap"><div class="eyebrow">12월 17일 · 교내 탐구</div><h2>현장 탐구 보고서 작성</h2><p class="lede">현장에서 관찰한 내용과 자신의 해석을 구분해 적어 보세요. 작성한 글은 이 기기에 임시 저장하거나 파일로 받아 제출할 수 있습니다. <strong>이 웹사이트에는 서버 제출 기능이 연결되어 있지 않습니다.</strong></p>
-<div class="report"><a class="detailed-report-link" href="report.html"><div><strong>정식 탐구 보고서 작성하기</strong><div><span>현장 근거·교과 분석·사진 3장·출력 지원</span></div></div><strong>열기 ↗</strong></a>
+<div class="report"><a class="detailed-report-link" href="report.html"><div><strong>정식 탐구 보고서 작성하기</strong><div><span>현장 근거·교과 분석·사진 3장·출력 지원</span></div></div><strong>열기 </strong></a>
 <div class="fields">
-<div class="field"><label for="student">학년 · 반 · 번호 · 이름</label><input id="student" placeholder="예: 1학년 8반 00번 홍길동"></div>
+<div class="field"><label for="student">학년, 반, 번호, 이름</label><input id="student" placeholder="예: 1학년 8반 00번 홍길동"></div>
 <div class="field"><label for="topic">탐구 주제</label><input id="topic" placeholder="예: 관광객이 늘어난 황리단길, 누구에게 좋은 변화일까?"></div>
 </div>
 <div class="field"><label for="observe">1. 답사 장소와 확인한 사실</label><textarea id="observe" placeholder="어디에서 무엇을 보았나요? 직접 관찰한 것과 안내 자료에 적힌 내용을 나누어 기록하세요."></textarea></div>
@@ -104,7 +59,7 @@ footer p{margin:4px 0}footer .small{color:#bacdc2}
 <p class="local-notice print-hide">개인정보 보호 안내: 이 양식은 입력 내용을 서버로 전송하지 않습니다. 공용 기기에서는 임시 저장을 사용하지 말고 작성 후 입력을 삭제하세요. 모바일·브라우저 설정에 따라 저장 내용이 사라질 수 있습니다.</p>
 </div></div></section>
 </main>
-<footer><div class="wrap"><strong>포항고등학교 · 교과 연계 탐구 프로젝트</strong><p>2026학년도 교과 연계 탐구 프로젝트 | 경주 역사·사회·윤리 융합 인문학 기행</p><p class="small">지도교사: 강명지 · 박기학 · 권형석 | 운영 일정과 방문지는 학교 사정에 따라 변경될 수 있음</p></div></footer>
+<footer><div class="wrap"><strong>포항고등학교 · 교과 연계 탐구 프로젝트</strong><p>2026학년도 교과 연계 탐구 프로젝트 | 경주 역사·사회·윤리 융합 인문학 기행</p><p class="small">지도교사: 강명지, 박기학, 권형석. 운영 일정과 방문지는 현장 사정에 따라 변경될 수 있습니다.</p></div></footer>
 <script>
 (function(){
   const ids=['student','topic','observe','link','proposal','source'], key='khs-gyeongju-2026-report-v1';
